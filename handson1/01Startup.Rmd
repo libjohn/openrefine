@@ -11,10 +11,10 @@ output: html_document
     1. Remember: The User Interface for Refine is Chrome or Firefox 
     2. If your default browser is one of these, Refine will auto-launch to http://127.0.0.1:3333
     3. If your default browser is IE, you’ll need to open the following URL http://127.0.0.1:3333 in Chrome or Firefox
-2. Create Project  > This Computer >  Choose Files > subset Raleigh Building permits.csv
-3. Click “Next >>” Button
+2. **Create Project  > This Computer >  Choose Files > subset Raleigh Building permits.csv**
+3. Click **Next >>** Button
 4. Select:  Columns are separated by “commas (CSV)”
-5. Change the Project Name to `Raleigh Building Permits` and click “Create Project >>” (top-right)
+5. Change the Project Name to `Raleigh Building Permits` and click **Create Project >>** (top-right)
 
 
-![](http://networkedplanet.com/assets/images/csv_to_rdf/createproj.png)
+<iframe height="360" width="640" src="https://warpwire.duke.edu/w/q3ABAA/" frameborder="0" scrolling="0" allowfullscreen></iframe>

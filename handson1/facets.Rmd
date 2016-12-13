@@ -1,6 +1,5 @@
 ---
 title: "Facet and Cluster"
-date: "December 13, 2016"
 output: html_document
 ---
 
@@ -13,7 +12,7 @@ output: html_document
 1. *How many rows are in this dataset?* (answers facet_answers file)
 2. Slide the bottom column navigation bar to the right
     + find the authorized_work column 
-    + click the column header:  `authorized_work > Facet > Text facet`
+    + click the column header:  **authorized_work > Facet > Text facet**
 3. *How many facets are there?*
 4. In the Facet box, click “count”.  *What is the 4th most popular type of authorized work?  How permits are authorized?*
 5. Find spelling clusters by clicking the “Cluster” button in the facet box
