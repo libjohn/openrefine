@@ -1,6 +1,5 @@
 ---
 title: "Start / Launch"
-author: "John Little"
 date: "December 13, 2016"
 output: html_document
 ---

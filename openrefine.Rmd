@@ -42,6 +42,7 @@ Duke University Libraries
 * **Faceting**: data exploration and limiting  
 * **Split** data in cells  
 * **Concatenate** variables  
+* **Data Types**, **Whitespace**, & **search & replace**
 * Special **Facets**   
     * by blank  
     * custom facets  
