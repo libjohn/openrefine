@@ -1,0 +1,88 @@
+---
+title: "OpenRefine"
+author: "John Little"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: readable
+    highlight: pygments
+---
+Data Analysis Librarian  
+[Data & Visualization Services](http://library.duke.edu/data) (the /Edge - Bostock Library)  
+Duke University Libraries  
+
+*January, 2017*
+
+## Intro to Workshop
+* slides 
+
+## Overview
+* What is OpenRefine
+* What is a Project
+* Reproducible Research
+
+## Load and Mange Data
+* Create Project  
+    - Open CSV, TSV, Excel, XML, JSON, etc.  
+    - Paste in raw data  
+    - Scrape from the Web  
+    - Orchestrate API calls  
+* Import Projects  
+    * Revive or share previous work.  **[OR] will** ...  
+    * Auto-save your projects  
+    * Auto-save all processing steps  
+    * Enables export and share  
+* Open existing projects  
+* Export & Share  
+    * Each individual project and all steps can be exported   
+    * Selective exporting:  share some procedures or data  
+
+## Demonstration
+* **Faceting**: data exploration and limiting  
+* **Split** data in cells  
+* **Concatenate** variables  
+* Special **Facets**   
+    * by blank  
+    * custom facets  
+* Row v Records ([Explained](http://kb.refinepro.com/2012/03/difference-between-record-and-row.html))  
+* General Refine Expression Language (**GREL**)  
+* Data Mining  
+    * **Web Scraping**:  fetching and parsing  
+* **Exporting**
+
+**Note**  
+1. The hands-on approach includes a reliance on the [data-science](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram) notion of **"[hacking](https://datajobs.com/what-is-data-science)"** (not "cracking").  Pay attention to what you are seeing, what you are typing, what happens, what transforms, the end-result vis-a-vis the initial state of the data.  
+2. Learn by doing  
+3. Learn *best* by working on your own project  
+4. Set up an appointment for consultations -- http://v.gd/littleconsult
+
+## Hands-on: 
+
+### Project 1
+* Faceting  
+* Clustering  
+* Mass Editing  
+* Split  
+* Concatenate  
+* Fetch & Parse  
+
+### Project 2
+* Faceting
+* Transforming
+* Normalizing
+* GREL - General Refine Expression Language
+
+### Project 3
+* Importing Excel worksheets
+* Faceting & Filtering
+* Transforming:  Adding colums and fill-down data
+
+### Project 4
+* Dates are weird!
+* Analyzing differences
+
+
+
+
+
