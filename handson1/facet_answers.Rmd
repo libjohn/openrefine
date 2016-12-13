@@ -1,0 +1,11 @@
+---
+title: "facet answers"
+author: "John Little"
+date: "December 13, 2016"
+output: html_document
+---
+## ANSWERS
+* 1) 21,982 rows
+* 3) 7633 choices
+* 4) SCREEN PORCH ; 233
+* 8) 238

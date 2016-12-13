@@ -1,0 +1,15 @@
+---
+title: "Shutdown"
+author: "John Little"
+date: "December 13, 2016"
+output: html_document
+---
+
+It's IMPORTANT to properly shutdown the application.  OpenRefine will automatically save your project as you transform your data. **However**, in my experience your **last opertion** *may* have to be **manually saved** by following the procedures below...
+
+
+**Windows**:  `Control-C`
+**Mac**:  Click the OR app in the doc, invoke Quit
+
+
+NOTE:  It is possible, but not garaunteed, to lose data if you don't’ follow the rather unintuitive shutdown procedures.  Better safe than sorry.
