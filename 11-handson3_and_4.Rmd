@@ -1,0 +1,8 @@
+# Hands-on 3
+## Importing Excel worksheets
+## Faceting & Filtering
+## Transforming:  Adding colums and fill-down data
+
+# Hands-on 4
+## Dates are weird!
+## Analyzing differences

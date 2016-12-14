@@ -1,0 +1,6 @@
+# hands-on 2
+
+## Faceting
+## Transforming
+## Normalizing
+## GREL - General Refine Expression Language
