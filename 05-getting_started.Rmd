@@ -1,0 +1,18 @@
+# Getting Started
+We'll use a **subset**[^1] of [Raleigh Building Permits data](https://github.com/libjohn/openrefine/tree/master/data) 
+
+1. FIRST, launch the Open-Refine icon from your computer (find and double-click the jewel icon)
+    + Remember: The User Interface for Refine is Chrome or Firefox 
+        + If your default browser is one of these, Refine will auto-launch to http://127.0.0.1:3333
+        + If your default browser is IE, you’ll need to open the following URL http://127.0.0.1:3333 in Chrome or Firefox
+2. **Create Project  > Web Addresses (URLs) >**  `https://github.com/libjohn/openrefine/raw/master/data/subset%20Raleigh%20Building%20Permits.csv`
+3. Click **Next >>** 
+4. Select:  Columns are separated by “commas (CSV)”
+5. Change the Project Name to `Raleigh Building Permits` and click **Create Project >>** (top-right)
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lPN6fHjmzZA" frameborder="0" allowfullscreen></iframe>
+
+
+  [^1]: Original Data Source:  [Master Building Permit Data Set](https://data.raleighnc.gov/Urban-Planning/City-of-Raleigh-Building-Permits-from-Jan-2000/hk3n-ieai?category=Permits)
+

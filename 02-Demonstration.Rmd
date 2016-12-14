@@ -1,0 +1,73 @@
+# Demonstration {-}
+    
+1. First, Create Project  > Web Addresses (URLs) >  https://raw.githubusercontent.com/libjohn/openrefine/master/data/bicycle-subset-phm-collection.tsv
+2. Uncheck - "Quotation marks are used to enclose" (bottom-right)
+3. Project Name to "bicycle categories"
+
+## Navigating the "Project" {-}
+* Notice there are 72 rows  
+* Notice there are two views: rows and records   
+* The “records” view is for advanced manipulation
+* You can
+    + “Show” 5-50 rows at a time
+    + Navigate screens “< Previous” & “next >” 
+
+## Facets  {-}
+* Categories > Facet > Text facet
+    1. Notice mashup of “pipe delimited” text facets
+    2. Why are there Pipe delimiters?
+    3. How many Category choices exist?
+    4. Switch between the “name” and “count” sorting options. 
+# Export a CSV file
+* Export > Comma-separated value
+* How many rows will export:  4, 16, 72, 180?  
+
+## Rows vs. Records {-}
+* Categories > edit cells > split multi-valued cells > separator = ` | `  
+    1. Now how many Category choices exist?
+    2. Click **records** to switch to the records view
+    3. Click **count**  What is the most popular Category term?
+    4. Click **name**  Limit to the “Juvenilia” facet; How many matching records?
+
+## Fetching  {-}
+*Scraping data from an API or Webpage*
+
+* Persistent Link > Edit column > Add column by fetching URLs…
+* New column name = ` Web Data `
+* *Notice* Throttle delay  
+    1. `2000` milliseconds is good. 
+    Less than 2 seconds and you *might* get booted, blocked, cast out!
+* Click OK and wait 
+* When done, you see you’ve got all the source data for each page associated with the link in the “Persistent Link” column
+
+## Parsing Data {-}
+A Brief Introduction  
+
+* Do you see that big block of gobbly text in the “Web Data” column?  
+* Typically, after fetching data, you’ll need to parse it  
+* You can use [GREL](https://github.com/OpenRefine/OpenRefine/wiki/General-Refine-Expression-Language) to parse data and isolate a specific bit of desired information
+* For example, you can transform the data in the retrieved cells with a [regular expression](https://github.com/libjohn/guides/blob/master/regex/regex.Rmd) to gather only the title of each object  
+    1. `value.parseHtml().select("div b")[0].htmlText()`
+* **GREL** is the *advanced power* of OpenRefine. We will come back to this.
+
+## Split   {-}
+* remove faceting > split on “production dates” > split on “ - “
+
+## Concatenate {-}  
+* Height > Edit column > Add column based on this column 
+* GREL expression = `value + " x " + cells["Width"].value`
+
+## Find & Replace {-}
+* Dimension > Edit cells > Transform
+* GREL = `value.replace("mm","")`
+
+## Facet by Blank {-}
+* Dimension > Facet > Customized facet > facet by blank
+## Text filter
+* Clear all facets
+* Title = `bmx`
+
+## Custom Facet {-}
+* Production date
+* Facet > custom text facet
+* `value.match(/(\d\d).*/)[0]`
