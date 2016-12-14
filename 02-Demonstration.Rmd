@@ -1,6 +1,6 @@
 # Demonstration {-}
     
-1. First, Create Project  > Web Addresses (URLs) >  https://raw.githubusercontent.com/libjohn/openrefine/master/data/bicycle-subset-phm-collection.tsv
+1. First, Create Project  > Web Addresses (URLs) >  `https://raw.githubusercontent.com/libjohn/openrefine/master/data/bicycle-subset-phm-collection.tsv`
 2. Uncheck - "Quotation marks are used to enclose" (bottom-right)
 3. Project Name to "bicycle categories"
 

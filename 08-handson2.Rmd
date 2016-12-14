@@ -4,7 +4,7 @@ The goal of this project is to create custom facets and perform basic transforma
 
 In this example you  will open a new data set to practice importing a different type of data, this time comma separated value, or CSV.  Last time you imported a tab separated value, or TSV.  OpenRefine will important many types of data.  Being aware of differnt data formats, and having the ability to opent those data are valuable skills.  In fact, one of the most frequently stumbling blocks with data tools is the simple problem of importing the data.  Practice and learn...
 
-## Custum Facets
+## Custom Facets
 
 ### Download new Data then Create a new OpenRefine Project:  
 
@@ -55,7 +55,7 @@ no location data...
 
 ## GREL to Transform and Normalize 
 
-In Hands-on 1 you briefly used General Refine Expression Language (GREL).  GREL is a powerful and extensible language that helps you manipulate data.  In these next steps we will learn GREL by using practical steps to improve the structure of the data.  
+The [General Refine Expression Language](https://github.com/OpenRefine/OpenRefine/wiki/General-Refine-Expression-Language) (GREL) is a powerful and extensible language to manipulate data.  In these next steps we will learn GREL by using practical steps to improve the structure of the data.  
 
 6. **Split** the LOCATION Column into two columns (Latitude and Longitude)  
     + LOCATION > Edit column > Split into several columns… > OK      (i.e. Accept the defaults)  
@@ -76,8 +76,8 @@ Regular Expressions can vary a lot.  You can match nearly any pattern with a "re
 
 7.  Create New Column from Existing Column using a regular expression to match a pattern  
     + INC DATETIME > Edit column > Add column based on this column ...  
-        1. New column name = YEAR  
-        2. Expression = value.match(/.*\/(\d{4}).*/)[0][^4] > OK  
+        1. New column name = `YEAR`  
+        2. Expression = `value.match(/.*\/(\d{4}).*/)[0]` > OK    [^4]
         
 ### Filter 
 8. Create a Text Filter:  Explore your data to find how many incident descriptions involve bicycles
@@ -111,17 +111,11 @@ Regular Expressions can vary a lot.  You can match nearly any pattern with a "re
     + Mouseover & Edit “LARCENY/BICYCLE/FELONY/$200- …”  
     + delete “/FELONY” 
     + Add an “S” to ‘BICYCLE’ > Apply 
-12. _How many rows match the LARCENY/BICYCLES ($200-$1000) Category_  
+12. _How many rows match the "LARCENY/BICYCLES ($200-$1000)" Category_  
 13. Export as an Excel File  
     + Export > Excel  
 
 
-
-
-## Transforming
-## Normalizing
-
-
   [^2]:  Original Data Source:  [Raleigh Open Data](https://data.raleighnc.gov/)
   [^3]: You may notice what seems to be either a math or logic error in how this second value is “counted.” The simple explanation is the first number counts from zero.  Add to that number the string length counting from 1 to get the second value.   
-  [^4]:  Here’s another example that captures the same data:  `value.match(/(\d\d)\/\d{2}\/(\d{4})\s.*\s([A|P][M])/)[1]`
+  [^4]:  Here’s another GREL example that captures the same data:  `value.match(/(\d\d)\/\d{2}\/(\d{4})\s.*\s([A|P][M])/)[1]`

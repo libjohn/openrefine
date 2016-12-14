@@ -50,20 +50,6 @@ Duke University Libraries
 
 ## Hands-on: {-}
 
-### Project 1
-* Faceting  
-* Clustering  
-* Mass Editing  
-* Split  
-* Concatenate  
-* Fetch & Parse  
-
-### Project 2
-* Faceting
-* Transforming
-* Normalizing
-* GREL - General Refine Expression Language
-
 ### Project 3
 * Importing Excel worksheets
 * Faceting & Filtering
