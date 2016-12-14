@@ -13,7 +13,7 @@ We'll use a **subset**[^2] of data from the Raleigh Open Data portal:  “Raleig
 1. Open  Data  
     * **Create Project  > Web Addresses (URLs) >**  `https://github.com/libjohn/openrefine/raw/master/data/Raleigh%20Police%20Incident%20Data%202005plus2014.csv`   
     * Next >> 
-    * You many want to give your project a pretty title, and then
+    * You many want to give your project a pretty title
     * Create Project >>  
 2. **Isolate data**: you have incident data without location information  
     - Location > Facet > Customized facets > Facet by blank  
