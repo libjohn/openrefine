@@ -1,6 +1,29 @@
-# hands-on 2
+# Hands-on 2
+
+The goal of this project is to create custom facets and perform basic transformations, Introduce you to Gthe General Refine Expression Language, and develop practical skills in transforming and normalizing data.  
+
+In this example you  will open a new data set to practice importing a different type of data, this time comma separated value, or CSV.  Last time you imported a tab separated value, or TSV.  OpenRefine will important many types of data.  Being aware of differnt data formats, and having the ability to opent those data are valuable skills.  In fact, one of the most frequently stumbling blocks with data tools is the simple problem of importing the data.  Practice and learn...
 
 ## Faceting
+
+### Download new Data then Create a new OpenRefine Project:  
+
+We'll use a **subset**[^1] of data from the Raleigh Open Data portal:  “Raleigh Police Incident Data 2005plus2014.csv”.  
+
+1. Open  Data  
+    * **Create Project  > Web Addresses (URLs) >**  `https://github.com/libjohn/openrefine/raw/master/data/Raleigh%20Police%20Incident%20Data%202005plus2014.csv`   
+    * Next >> 
+    * You many want to give your project a pretty title, and then
+    * Create Project >>  
+2. **Isolate data**: you have incident data without location information  
+    - Location > Facet > Customized facets > Facet by blank  
+    - Click true  (True = cell is blank ; False = cell has data)  
+    - _How many matching rows have no location data?_   
+
+
 ## Transforming
 ## Normalizing
 ## GREL - General Refine Expression Language
+
+
+  [^1]:  Original Data Source:  [Raleigh Open Data](https://data.raleighnc.gov/)

@@ -17,3 +17,8 @@
 ### Goal Mass edit cells {-}
 * 2) 3 ; 9668
 * 3) 9671
+
+
+### Cutom Facets
+(how many matching rows have no locaiton data)
+*  2.c)  There are 10576 matching rows without location data
