@@ -1,6 +1,6 @@
 # Demonstration {-}
     
-1. First, Create Project  > Web Addresses (URLs) >  `https://raw.githubusercontent.com/libjohn/openrefine/master/data/bicycle-subset-phm-collection.tsv`
+1. <span class="or-menu">Create Project  > Web Addresses (URLs) > </span> `https://raw.githubusercontent.com/libjohn/openrefine/master/data/bicycle-subset-phm-collection.tsv`
 2. Uncheck - "Quotation marks are used to enclose" (bottom-right)
 3. Project Name to "bicycle categories"
 
@@ -13,17 +13,17 @@
     + Navigate screens “< Previous” & “next >” 
 
 ## Facets  {-}
-* Categories > Facet > Text facet
+* <span class="or-menu">Categories > Facet > Text facet</span>
     1. Notice mashup of “pipe delimited” text facets
     2. Why are there Pipe delimiters?
     3. How many Category choices exist?
     4. Switch between the “name” and “count” sorting options. 
-# Export a CSV file
-* Export > Comma-separated value
+* Export a CSV file
+* <span class="or-menu">Export > Comma-separated value</span>
 * How many rows will export:  4, 16, 72, 180?  
 
 ## Rows vs. Records {-}
-* Categories > edit cells > split multi-valued cells > separator = ` | `  
+* <span class="or-menu">Categories > edit cells > split multi-valued cells ></span> separator = ` | `  
     1. Now how many Category choices exist?
     2. Click **records** to switch to the records view
     3. Click **count**  What is the most popular Category term?
@@ -32,7 +32,7 @@
 ## Fetching  {-}
 *Scraping data from an API or Webpage*
 
-* Persistent Link > Edit column > Add column by fetching URLs…
+* <span class="or-menu">Persistent Link > Edit column > Add column by fetching URLs…</span>
 * New column name = ` Web Data `
 * *Notice* Throttle delay  
     1. `2000` milliseconds is good. 
@@ -54,20 +54,20 @@ A Brief Introduction
 * remove faceting > split on “production dates” > split on “ - “
 
 ## Concatenate {-}  
-* Height > Edit column > Add column based on this column 
+* <span class="or-menu">Height > Edit column > Add column based on this column</span>
 * GREL expression = `value + " x " + cells["Width"].value`
 
 ## Find & Replace {-}
-* Dimension > Edit cells > Transform
+* <span class="or-menu">Dimension > Edit cells > Transform</span>
 * GREL = `value.replace("mm","")`
 
 ## Facet by Blank {-}
-* Dimension > Facet > Customized facet > facet by blank
+* <span class="or-menu">Dimension > Facet > Customized facet > facet by blank</span>
 ## Text filter
 * Clear all facets
 * Title = `bmx`
 
 ## Custom Facet {-}
 * Production date
-* Facet > custom text facet
+* <span class="or-menu">Facet > custom text facet</span>
 * `value.match(/(\d\d).*/)[0]`

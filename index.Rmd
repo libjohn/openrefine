@@ -3,14 +3,16 @@ title: "OpenRefine for Data Cleaning"
 author: "John Little"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-output: bookdown::gitbook
+output: 
+  bookdown::gitbook:
+    css: style.css
 documentclass: book
 biblio-style: apalike
 link-citations: yes
 github-repo: libjohn/openrefine
 description: "This is a lab workbook of instructional and hands-on materials for the OpenRefine workshops hosted and taught by the Data & Visualization Services Department, Duke University Libraries."
 ---
-
+<!-- gitbook(css="style.css") -->
 <!-- render_book("index.Rmd", output_format = NULL, clean = TRUE, 
   envir = parent.frame(), clean_envir = !interactive(), 
   output_dir = NULL, new_session = NA, preview = FALSE, 

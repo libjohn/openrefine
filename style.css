@@ -1,0 +1,9 @@
+.or-menu {
+    background-color: rgba(0,0,0,.2);
+    padding: 3px;
+    font-style: italic;
+}
+.red {
+    background-color: rgba(183, 98, 114,.4);
+    padding: 3px;
+}
