@@ -79,6 +79,7 @@ It's important to understand OpenRefine was designed to transform data in bulk. 
 the same value
 6. Click “Remove All” to remove the facet
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2lrGWTXjgtw" frameborder="0" allowfullscreen></iframe>
 
 ## Split data in cells
 1. address > Edit column > Split into several columns…
