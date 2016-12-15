@@ -19,6 +19,6 @@
 * 3) 9671
 
 
-### Cutom Facets
+### Custom Facets
 (how many matching rows have no locaiton data)
 *  2.c)  There are 10576 matching rows without location data

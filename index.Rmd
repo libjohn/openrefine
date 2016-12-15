@@ -18,7 +18,7 @@ description: "This is a lab workbook of instructional and hands-on materials for
 
 # Preface {-}
 
-This is a lab workbook of instructional and hands-on materials for the OpenRefine workshops hosted and taught by the Data & Visualization Services Department, Duke University Libraries. 
+This lab workbook consisits of of instructional and hands-on materials for the OpenRefine workshops taught by John Little and hosted by the Data & Visualization Services Department, Duke University Libraries. 
 
 &nbsp;  
 

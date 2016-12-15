@@ -1,4 +1,4 @@
-# Hands-on 3
+# Hands-on: reshape & text filter
 
 **Reshaping Your Data**  
 
@@ -23,7 +23,9 @@ The data, “Salary.xslx”, are NBA salary data.
     * You many want to give your project a pretty title
     * Create Project >>
     * Parse data as 
-        1. Worksheets to Import: **Check** "2013-2014 666 rows" & **UnCheck** "2014-2015 599 rows"  
+        1. Worksheets to Import: 
+            + **Check** "2013-2014 666 rows"
+            + **UnCheck** "2014-2015 599 rows"  
         2. **UnCheck** "Store blank rows" 
             + Notice lines 20 & 22 disappear  
         3. **UnCheck** "Parse Next" 1 lines as column headers 
@@ -45,12 +47,12 @@ The data, “Salary.xslx”, are NBA salary data.
 5. Make a column for team name and fill it.  
     + Isolate team-name rows using a facet on the blank cells in the Salary column  
         1. Salary > Facet > Customized facets > Facet by blank 
-            + Why do you think **this doesn’t work**? Those cells are actually filled with an invisible space (\s).  They’re not actually blank and only appear blank. So,  **regular expressions** to the rescue!  
+            + Why do you think **this doesn’t work**? Those cells are actually filled with an invisible space (`\s`).  They’re not actually blank and only appear blank. So,  **regular expressions** to the rescue!  
         2. Close the facet  
     + Salary > Text filter > check "regular expression" > `^\s`  
         + `\s` means “a space”; `^` means “must begin the line”  
     + **Mouseover** the the "Cleveland Cavaliers" **Salary cell**:  
-        + edit > highlight all the text EXCEPT the first space:  "Tot   $66,611,520" > <<cut to clipboard>> > Apply  
+        + edit > highlight all the text EXCEPT the first space:  "Tot   $66,611,520" > \<\<cut to clipboard\>\> > Apply  
         + BE SURE to leave a blank space where the Salary data was  
     + Edit the individual Notes cell for the "Cleveland Cavaliers" cell:  
         + edit > paste from clipboard "Tot $66,611,520" > Apply  
@@ -66,8 +68,3 @@ The data, “Salary.xslx”, are NBA salary data.
     5. All > Edit rows > Remove all matching rows  
     6. Close (or "X out") the Salary text filter
 
-# slide 32
-
-# Hands-on 4
-## Dates are weird!
-## Analyzing differences

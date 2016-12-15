@@ -12,14 +12,62 @@ Duke University Libraries
 * What is a Project
 * Reproducible Research
 
-## Load and Mange Data {-}
+## Comparative Advantage {-}
+* Easy   
+    + Menu driven transformations cover **faceting**, and **filtering**
+    + Clean up data inconsistencies using powerful **clustering** and edit algorithms 
+    + Transforming Data 
+* Advanced power comes from Regular Expressions implementation via GREL  
+* Why Use OpenRefine? 
+    + **you don't want to be a data engineer**, but you need to fix your data
+        + Don't have to deal with file handling  
+        + Don't have to deal with iterating (looping logic)  
+        + Don't have to write complex conditional statements  
+        + Don't have to think hard to manipulate arrays  
+    + Or, you are a lazy programmer (i.e. a smart programmer) 
+    + Or, you are a subject matter expert and Refine is the right tool for the job
+* Frequently, OpenRefine is simpler to use than Excel for data transformations
+    + Regular Expressions vs. Excel Formulas
+
+|  Expresson Language | Expression |
+|---------------------|------------|
+GREL | `value.match(/(^[0-9]{1,2}\w\w)\s(.*)/)[0]` 
+Excel Formula | `INDEX(salary!$C$1:$C$4,MATCH(1,('player DB'!$A2=salary!$A$1:$A$4)*('player DB'!$B2=salary!$B$1:$B$4),0))`
+
+## Characteristics {-}
+
+### General {-}
+
+[OpenRefine](http://openrefine.org) is an **open source data cleaning** and **transformation** application used when [Data Wrangling](https://en.wikipedia.org/wiki/Data_wrangling
+
+* Refine looks like a spreadsheet but it's really a database  
+  + There is an OpenRefine statistical extension for simple statistics  
+  + Extensions are listed on the download page  
+* Transformations are performed on all MATCHING rows  
+* Easily find the “shape” of the data  
+* All transformations are “recorded” supporting reproducible research  
+* User Interface is your local web browser (Chrome or Firefox)  
+* Application is a Java Virtual Machine (JVM) on your local CPU -- not a cloud service  
+* File ingest Formats include:  TSV, CSV, Excel, XML, RDF, JSON, Google Fusion Tables and Google Spreadsheets  
+* File export Formats include: TSV, CSV, Excel, HTML table, Templating (e.g. JSON), and whole OpenRefine Projects  
+* 50,000 Rows (1.4 GB RAM ) ; Upper limit is about 5 Million Rows (requires some memory allocation)  
+
+
+### Video {-}
+Watch this excellent and brief Video Introduction 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B70J_H_zAWM?list=UUqwSVsJ8CWD9pQUZDbJC1ew" frameborder="0" allowfullscreen></iframe>
+
+
+### Load and Mange Data {-}
 * Create Project  
     - Open CSV, TSV, Excel, XML, JSON, etc.  
     - Paste in raw data  
     - Scrape from the Web  
     - Orchestrate API calls  
 * Import Projects  
-    * Revive or share previous work.  **[OR] will** ...  
+    * Revive or share previous work.  
+* OpenRefine will ...  
     * Auto-save your projects  
     * Auto-save all processing steps  
     * Enables export and share  
@@ -42,22 +90,13 @@ Duke University Libraries
     * **Web Scraping**:  fetching and parsing  
 * **Exporting**
 
-**Note**  
+## Workshop Philosophy Note {-}
 1. The hands-on approach includes a reliance on the [data-science](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram) notion of **"[hacking](https://datajobs.com/what-is-data-science)"** (not "cracking").  Pay attention to what you are seeing, what you are typing, what happens, what transforms, the end-result vis-a-vis the initial state of the data.  
 2. Learn by doing  
 3. Learn *best* by working on your own project  
 4. Set up an appointment for consultations -- http://v.gd/littleconsult
 
-## Hands-on: {-}
 
-### Project 3
-* Importing Excel worksheets
-* Faceting & Filtering
-* Transforming:  Adding colums and fill-down data
-
-### Project 4
-* Dates are weird!
-* Analyzing differences
 
 
 

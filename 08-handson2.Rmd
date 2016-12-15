@@ -1,4 +1,4 @@
-# Hands-on 2
+# Hands-on: GREL
 
 The goal of this project is to create custom facets and perform basic transformations, Introduce you to Gthe General Refine Expression Language, and develop practical skills in transforming and normalizing data.  
 
@@ -35,9 +35,9 @@ Position:  0123456789111111111122
                      012345678901
 </pre>
 
-To take the year“2014”, use expression:`  	value[6,10]`[^3]  
-To take the hour, use`            					value[11,13]`  
-To take PM (or AM), use`            				value[20,22]`  
+To take the year“2014”, use expression: `value[6,10]`[^3]  
+To take the hour, use `value[11,13]`  
+To take PM (or AM), use `value[20,22]`  
 
 3. Create a Custom Facet to Sort by Year 
     + INC DATETIME > Facet > Custom text facet ...  
@@ -116,6 +116,6 @@ Regular Expressions can vary a lot.  You can match nearly any pattern with a "re
     + Export > Excel  
 
 
-  [^2]:  Original Data Source:  [Raleigh Open Data](https://data.raleighnc.gov/)
-  [^3]: You may notice what seems to be either a math or logic error in how this second value is “counted.” The simple explanation is the first number counts from zero.  Add to that number the string length counting from 1 to get the second value.   
-  [^4]:  Here’s another GREL example that captures the same data:  `value.match(/(\d\d)\/\d{2}\/(\d{4})\s.*\s([A|P][M])/)[1]`
+[^2]:  Original Data Source:  [Raleigh Open Data](https://data.raleighnc.gov/)
+[^3]: You may notice what seems to be either a math or logic error in how this second value is “counted.” The simple explanation is the first number counts from zero.  Add to that number the string length counting from 1 to get the second value.   
+[^4]:  Here’s another GREL example that captures the same data:  `value.match(/(\d\d)\/\d{2}\/(\d{4})\s.*\s([A|P][M])/)[1]`
