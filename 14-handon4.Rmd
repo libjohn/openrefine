@@ -12,16 +12,16 @@ This project will give you practice manipulating dates
 
 1. Open the existing Refine Project from Project 1 - `Raleigh Building Permits`  
 2. Make a copy of the issue_date column  
-    + issue_date > Edit column > Add column based on this column…  
-        + new column name = `date2` > OK  
+    + <span class="or-menu">issue_date > Edit column > Add column based on this column…  </span>   
+        + <span class="or-menu">new column name = `date2` > OK  </span>   
 3. Create a customized facet on AM/PM  
-    + issue_date > Facet > Custom text facet …  
+    + <span class="or-menu">issue_date > Facet > Custom text facet …  </span>   
         + Expression = `value.slice(20,22)`  
 4. Create a customized facet on the hour  
-    + issue_date > Facet > Custom text facet…  
+    + <span class="or-menu">issue_date > Facet > Custom text facet…  </span>  
         + Expression = `value.slice(10,13)`  
 5. Convert to Date  
-    + date2 > Edit cells > Common transforms > To Date  
+    + <span class="or-menu">date2 > Edit cells > Common transforms > To Date  </span>  
     
     > The status message indicates 19598 rows were transformed, but there are 21982 rows of data, what went wrong?
     
@@ -30,30 +30,30 @@ This project will give you practice manipulating dates
         + For whatever reason, the date converter doesn’t like timestamps that contain 12PM as a designation  
         + So let’s convert those dates from 12PM to 00PM (Why?  because it fixes the problem)  
 6. Convert 12PM to 00PM  
-    + date2 Edit cells > transform  
+    + <span class="or-menu">date2 Edit cells > transform  </span>  
         + Expression = `value.replace(" 12:"," 00:")`
 7. Now convert to date  
-    + date2 > Edit cells > Common transforms > To Date  
+    + <span class="or-menu">date2 > Edit cells > Common transforms > To Date  </span> 
     
     > That converts 2384 cells 
     
 8. Now make a date facet  
-    + date2 > Facet > Timeline facet
+    + <span class="or-menu">date2 > Facet > Timeline facet </span> 
 
 
 ## Logic  
 
-This time we'll put together everything we've learned (how to use OpenRefine, regular expressions, GREL) and add in some **IF** logic.  You will see in this example that OpenRefine is a powerful data tranformation tool that can easily support a lot of casual attention to syntax, file handling, and looping.  But OpenRefine is also a powerful and extensible tool that supports scripting that begins to look like programming.  
+This time we'll put together everything we've learned (how to use OpenRefine, regular expressions, GREL) and add in some **IF** logic.  You will see in this example that OpenRefine is a powerful data transformation tool that can easily support a lot of casual attention to syntax, file handling, and looping.  But OpenRefine is also a powerful and extensible tool that supports scripting that begins to look like programming.  
 
 **Goal**: Make the same data transformations as in the previous slide’s steps 2-7, but this time you’ll do it in one step.  Think about how GREL allows you to take shortcuts.
 
 
 1. First, Remove All facets, then...  
-    + issue_date > Edit Column > Add column based on this column…  
+    + <span class="or-menu">issue_date > Edit Column > Add column based on this column…  </span> 
     + New Column Name = `date3`  
     + Expression = `if(value.slice(20,22) == "PM", value.replace(/(.*\s)12(:\d\d:.*)/,"$100$2"), value).toDate()`  
 2. Now make a date facet  
-    + date3 > Facet > Timeline facet
+    + <span class="or-menu">date3 > Facet > Timeline facet </span> 
 
 
 ## Reproducible

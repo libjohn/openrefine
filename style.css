@@ -7,3 +7,22 @@
     background-color: rgba(183, 98, 114,.4);
     padding: 3px;
 }
+.highlight-yellow {
+    background-color: rgba(255,255,0,.4);
+    padding: 3px;
+}
+.highlight-yellow-fixed {
+    background-color: rgba(255,255,0,.4);
+    font-family: monospace;  
+    padding: 3px;
+}
+.highlight-turq-fixed {
+    background-color: rgba(0,255,255,.4);
+    font-family: monospace;  
+    padding: 3px;
+}
+.highlight-green-fixed {
+    background-color: rgba(0,255,0,.4);
+    font-family: monospace;  
+    padding: 3px;
+}

@@ -24,7 +24,7 @@
 
 ## Rows vs. Records {-}
 * <span class="or-menu">Categories > edit cells > split multi-valued cells ></span> separator = ` | `  
-    1. Now how many Category choices exist?
+    1. Now how many <span class="highlight-yellow">yellow Category</span> choices exist?
     2. Click **records** to switch to the records view
     3. Click **count**  What is the most popular Category term?
     4. Click **name**  Limit to the “Juvenilia” facet; How many matching records?
@@ -38,7 +38,7 @@
     1. `2000` milliseconds is good. 
     Less than 2 seconds and you *might* get booted, blocked, cast out!
 * Click OK and wait 
-* When done, you see you’ve got all the source data for each page associated with the link in the “Persistent Link” column
+* When done, you’ve got all the source data for each page associated with the link in the “Persistent Link” column
 
 ## Parsing Data {-}
 A Brief Introduction  

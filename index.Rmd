@@ -20,10 +20,10 @@ description: "This is a lab workbook of instructional and hands-on materials for
 
 # Preface {-}
 
-This lab workbook consisits of of instructional and hands-on materials for the OpenRefine workshops taught by John Little and hosted by the Data & Visualization Services Department, Duke University Libraries. 
+This lab workbook consists of of instructional and hands-on materials for the OpenRefine workshops taught by John Little and hosted by the Data & Visualization Services Department, Duke University Libraries. 
 
 &nbsp;  
 
 &nbsp;  
 
-![This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License")  Data, presentation, and handouts are shareable underthe [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.](https://creativecommons.org/licenses/by-nc-sa/4.0/)(CC BY-NC-SA license)
+![This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License")  Data, presentation, and handouts are shareable under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.](https://creativecommons.org/licenses/by-nc-sa/4.0/)(CC BY-NC-SA license)

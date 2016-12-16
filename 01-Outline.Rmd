@@ -29,9 +29,9 @@ Duke University Libraries
 * Frequently, OpenRefine is simpler to use than Excel for data transformations
     + Regular Expressions vs. Excel Formulas
 
-|  Expresson Language | Expression |
-|---------------------|------------|
-GREL | `value.match(/(^[0-9]{1,2}\w\w)\s(.*)/)[0]` 
+|  Expression Language | Expression |
+|---|------------------------------------------------------------------------|
+GREL | `value.match(/`<span class="highlight-yellow-fixed">(\^&#91;0-9&#93;\{1,2\}\\w\\w)</span>`\s(.*)/)[0]` 
 Excel Formula | `INDEX(salary!$C$1:$C$4,MATCH(1,('player DB'!$A2=salary!$A$1:$A$4)*('player DB'!$B2=salary!$B$1:$B$4),0))`
 
 ## Characteristics {-}

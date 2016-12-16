@@ -18,10 +18,10 @@ The data, “Salary.xslx”, are NBA salary data.
 ## Ingest Excel data  
 
 1. Open  Data  
-    * **Create Project  > Web Addresses (URLs) >** `https://github.com/libjohn/openrefine/raw/master/data/salary.xlsx`
-    * Next >> 
+    * <span class="or-menu">Create Project  > Web Addresses (URLs) > </span>  `https://github.com/libjohn/openrefine/raw/master/data/salary.xlsx`
+    * <span class="or-menu">Next >> </span>  
     * You many want to give your project a pretty title
-    * Create Project >>
+    * <span class="or-menu">Create Project >> </span> 
     * Parse data as 
         1. Worksheets to Import: 
             + **Check** "2013-2014 666 rows"
@@ -30,41 +30,41 @@ The data, “Salary.xslx”, are NBA salary data.
             + Notice lines 20 & 22 disappear  
         3. **UnCheck** "Parse Next" 1 lines as column headers 
             + Notice the "Atlanta Hawks" are no longer the column header for the first column  
-    * Project name = `salary data` > Create Project  
-2. Rename Columns: "Player", "Salary", "Notes"  (Column Header > Edit Column > Rename this column)  
+    * Project name = `salary data` <span class="or-menu">> Create Project </span>  
+2. Rename Columns: "Player", "Salary", "Notes" ^[<span class="or-menu">Column Header > Edit Column > Rename this column </span>]    
 3. Show as: rows to '25' (notice row 21)
 
 ## Facets
 4. Remove all rows where '----' exist in the Player column  
-    + **Player > Facet > Text Facet** > 
+    + <span class="or-menu">Player > Facet > Text Facet** > </span>  
         * Sort by: count > click: '----' :  
         * You should now have 29 matching rows that begin '----'  
-    + All > Edit rows > Remove all matching rows  
+    + <span class="or-menu">All > Edit rows > Remove all matching rows  </span>  
     + Click:  **Remove All** in the **Facet/Filter** sidebar  
     
 > Notice: in the next step, team names precede each team roster and are followed by two blank cells in the same row.  Scroll through the screens (Click "next >") a few times; return to the first screen  
 
 5. Make a column for team name and fill it.  
     + Isolate team-name rows using a facet on the blank cells in the Salary column  
-        1. Salary > Facet > Customized facets > Facet by blank 
+        1. <span class="or-menu">Salary > Facet > Customized facets > Facet by blank </span> 
             + Why do you think **this doesn’t work**? Those cells are actually filled with an invisible space (`\s`).  They’re not actually blank and only appear blank. So,  **regular expressions** to the rescue!  
         2. Close the facet  
-    + Salary > Text filter > check "regular expression" > `^\s`  
+    + <span class="or-menu">Salary > Text filter > check "regular expression" > `^\s`  </span> 
         + `\s` means “a space”; `^` means “must begin the line”  
     + **Mouseover** the the "Cleveland Cavaliers" **Salary cell**:  
         + edit > highlight all the text EXCEPT the first space:  "Tot   $66,611,520" > \<\<cut to clipboard\>\> > Apply  
         + BE SURE to leave a blank space where the Salary data was  
     + Edit the individual Notes cell for the "Cleveland Cavaliers" cell:  
-        + edit > paste from clipboard "Tot $66,611,520" > Apply  
+        + edit > \<\<paste from clipboard\>\> "Tot $66,611,520" > Apply  
         + This time you do not need a leading blank space  
         
 ## Text Filter  
 
 6. Add the team name as a new column for each player then remove team name from the Player Column  
-    1. Player > Edit column > Add column based on this column ... > New column name = `Team` > OK  
+    1. <span class="or-menu">Player > Edit column > Add column based on this column ... > New column name = `Team` > OK  </span>   
     2. Remove All facets  
-    3. Team > Edit cells > Fill down  
-    4. Salary > Text filter > check "regular expression" > `^\s`
-    5. All > Edit rows > Remove all matching rows  
+    3. <span class="or-menu">Team > Edit cells > Fill down  </span>   
+    4. <span class="or-menu">Salary > Text filter > check "regular expression" > `^\s` </span>   
+    5. <span class="or-menu">All > Edit rows > Remove all matching rows  </span>   
     6. Close (or "X out") the Salary text filter
 
