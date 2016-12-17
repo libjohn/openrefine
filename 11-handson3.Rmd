@@ -1,4 +1,4 @@
-# Hands-on: reshape & text filter
+# Hands-on: reshape
 
 **Reshaping Your Data**  
 

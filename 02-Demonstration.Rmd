@@ -15,21 +15,24 @@
 ## Facets  {-}
 * <span class="or-menu">Categories > Facet > Text facet</span>
     1. Notice mashup of “pipe delimited” text facets
-    2. Why are there Pipe delimiters?
-    3. How many Category choices exist?
+    2. *Why are there Pipe delimiters?*
+    3. *How many Category choices exist?*
     4. Switch between the “name” and “count” sorting options. 
 * Export a CSV file
 * <span class="or-menu">Export > Comma-separated value</span>
-* How many rows will export:  4, 16, 72, 180?  
+* *How many rows will export:  4, 16, 72, 180?*  
 
 ## Rows vs. Records {-}
+
+* Row v Records ^[Row v Records [Explained](http://kb.refinepro.com/2012/03/difference-between-record-and-row.html)]  
+
 * <span class="or-menu">Categories > edit cells > split multi-valued cells ></span> separator = ` | `  
-    1. Now how many <span class="highlight-yellow">yellow Category</span> choices exist?
+    1. *Now how many Category choices exist?*
     2. Click **records** to switch to the records view
     3. Click **count**  What is the most popular Category term?
     4. Click **name**  Limit to the “Juvenilia” facet; How many matching records?
 
-## Fetching  {-}
+## Web Scrape & API  {-}
 *Scraping data from an API or Webpage*
 
 * <span class="or-menu">Persistent Link > Edit column > Add column by fetching URLs…</span>
@@ -43,12 +46,13 @@
 ## Parsing Data {-}
 A Brief Introduction  
 
-* Do you see that big block of gobbly text in the “Web Data” column?  
+* Look fora big block of gobbly text in the “Web Data” column.  That is JSON formatted data  
 * Typically, after fetching data, you’ll need to parse it  
-* You can use [GREL](https://github.com/OpenRefine/OpenRefine/wiki/General-Refine-Expression-Language) to parse data and isolate a specific bit of desired information
+* You can use GREL ^[[General Refine Expression Language](https://github.com/OpenRefine/OpenRefine/wiki/General-Refine-Expression-Language)] to parse data and isolate a specific bit of desired information
+    * **GREL** is the advanced power of OpenRefine. [We will come back to this](#grel)
 * For example, you can transform the data in the retrieved cells with a [regular expression](https://github.com/libjohn/guides/blob/master/regex/regex.Rmd) to gather only the title of each object  
     1. `value.parseHtml().select("div b")[0].htmlText()`
-* **GREL** is the *advanced power* of OpenRefine. We will come back to this.
+
 
 ## Split   {-}
 * remove faceting > split on “production dates” > split on “ - “

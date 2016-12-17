@@ -26,3 +26,6 @@
     font-family: monospace;  
     padding: 3px;
 }
+em {
+  font-variant: small-caps;
+}

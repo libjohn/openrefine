@@ -2,23 +2,23 @@
 
 ## Hands-on Answers {-}
 
-### Goal 1 {-}
+### facets {#appendix-facets -}
 * 1) 21,982 rows
 * 3) 7633 choices
 * 4) SCREEN PORCH ; 233
 * 8) 238
 
-### Goal 2 {-}
+### cluster {#appendix-cluster -}
 * 1) 340
 * 2) 578
 * 4) 3; both
 * 5) 21,982
 
-### Goal Mass edit cells {-}
+###  mass edit cells {#appendix-mass-edit -}
 * 2) 3 ; 9668
 * 3) 9671
 
 
-### Custom Facets
+### custom Facets {-}
 (how many matching rows have no location data)
 *  2.c)  There are 10576 matching rows without location data

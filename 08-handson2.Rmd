@@ -1,4 +1,4 @@
-# Hands-on: GREL
+# Hands-on: GREL {#grel}
 
 The goal of this project is to create custom facets and perform basic transformations, introduce you to the General Refine Expression Language, and develop practical skills in transforming and normalizing data.  
 

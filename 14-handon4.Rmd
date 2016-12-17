@@ -58,7 +58,7 @@ This time we'll put together everything we've learned (how to use OpenRefine, re
 
 ## Reproducible
 
-Refine also supports reproducible research and we have discussed none of that in this tutorial.  Here are the things you may have already noticed.
+Refine supports reproducible research.  Here are the things you may have already noticed.
 
 * Undo:  every step is recorded and can be undone.
 * Share:  your steps are recorded and can be shared in a JSON notation
