@@ -1,9 +1,11 @@
-# Hands-on: basic transformations
+# Hands-on: basic transformations {#start}
 
 ## Getting Started
 We'll use a **subset**[^1] of [Raleigh Building Permits data](https://github.com/libjohn/openrefine/tree/master/data) 
 
-1. [Launch](https://github.com/OpenRefine/OpenRefine/wiki/Installation-Instructions) the Open-Refine icon from your computer (find and double-click the jewel icon)
+1. Launch the Open-Refine icon from your computer (find and double-click the jewel icon.)
+    + [Installations / Start / Stop instructions](https://github.com/OpenRefine/OpenRefine/wiki/Installation-Instructions) 
+    + [Owen Stephens's helpful video illustrating installation](https://summit.uwaterloo.ca/p389l6kkluv/?launcher=false&fcsContent=true&pbMode=normal)
     + Remember: The User Interface for Refine is Chrome or Firefox 
         + If your default browser is one of these, Refine will auto-launch to http://127.0.0.1:3333
         + If your default browser is IE, you’ll need to open the following URL http://127.0.0.1:3333 in Chrome or Firefox
