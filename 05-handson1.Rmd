@@ -69,18 +69,18 @@ Cluster & Edit dialog box
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/orkVO4ORV-4?list=PLIUcX1JrVUNXSgBbyMCluwaJYTWJ--fDd" frameborder="0" allowfullscreen></iframe>
 
-### Mass Editing {-}
+### Mass Editing {#mass-edit -}
 It's important to understand OpenRefine was designed to transform data in bulk.  It is possible to edit single data cells but it is not as convenient as some other, more WYSWIG, tools.  This exercise will help you learn how to accomplish these kinds of mass data transformations
 
 1. Make a facet on the work_type_description column
-2. There are two facets for new buildings:  “NEW BUILDING” and “New Building”
-*How many “NEW BUILDING” rows exist; how many “New Building” rows exist?* ([answer](#appendix-mass-edit))
+2. There are two facets for new buildings:  “NEW BUILDING” and “New Building”.
+    + *How many “NEW BUILDING” rows exist; how many “New Building” rows exist?* ([answer](#appendix-mass-edit))
 3. Select “NEW BUILDING” facet, limiting to 3 matching rows.  Hover your mouse over the all caps “NEW BUILDING” facet until you see the “edit” feature appear; click “edit” and alter the text to title case:  “New Building” ; click Apply
-*How many “New Building” rows exist now?* ([answer](#appendix-mass-edit))
+    + *How many “New Building” rows exist now?* ([answer](#appendix-mass-edit))
 4. Mass edit “OTHER” & “Other” so they have the same value
 5. Mass edit “ALTERNATIONS/REPAIRS” and “Alternations/repairs” so they have 
 the same value
-6. Click “Remove All” to remove the facet
+6. Click “Remove All” to remove the facet window
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2lrGWTXjgtw?list=PLIUcX1JrVUNXSgBbyMCluwaJYTWJ--fDd" frameborder="0" allowfullscreen></iframe>
 
@@ -126,7 +126,7 @@ Looking at the latitude and longitude cells, one column appears in green text (i
 
 ## Web Scraping
 
-### Select a subset {-}
+### Select a subset {#subset -}
 
 We want to gather the FIPS code for a subset of the data.  The government server returns data in a JSON format so we’ll parse the data after we retrieve it. First we’ll subset our dataset for expediency.  This limits our waiting time during the workshop.
 
@@ -137,7 +137,7 @@ We want to gather the FIPS code for a subset of the data.  The government server
 3. <span class="or-menu"> authorized_work > Facet > Text facet </span>
 4. select the “3 SEASON ROOM” facet
 
-You should now have 6 matching rows.  Next we’ll use Refine to gather data from another website.  Our Goal is to get the FIPS code for all counties. 
+You should now have 5 matching rows.  
 
 ### API {-}
 
@@ -145,15 +145,17 @@ Now let’s fetch the data from an [API](http://www.broadbandmap.gov/developer/)
 
 
 5. fetch JSON data from the National Broadband Map.  We’ll use the [API documentation for Geography by Name API](http://www.broadbandmap.gov/developer/api/census-api-by-geography-name) which returns Census geography for a geography name (e.g. Durham)  
-    + The documentation informs us that the format of the URL we want to construct is as follows:
+    + Documentation
+        + The documentation informs us that the format of the URL we want to construct is as follows:
 http://www.broadbandmap.gov/broadbandmap/census/county/durh?format=json 
-    + Notice the data values in the “county” column.  All we do is construct a URL which calls the value of the cells from each row of the “country” column
+        + Notice the data values in the “county” column.  All we do is construct a URL which calls the value of the cells from each row of the “country” column
     + <span class="or-menu"> county > Edit column > Add column by fetching URLs… </span>
     + New column name = `JSON data`
     + Throttle delay = `2000`
     + Expression = <br>
-`'http://www.broadbandmap.gov/broadbandmap/census/county/'+value+'?format=json'`
+`'https://www.broadbandmap.gov/broadbandmap/census/county/'+value+'?format=json'`
     + OK
+        + Wait for the results.  If you limited to the matching rows in the [select subset](#subset) section this will only take a few seconds.
 
 ### Parse {-}
 
@@ -167,7 +169,7 @@ Now parse the value of the JSON data “fips” element; call the “<span class
     
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DbjpmVEpMiI?list=PLIUcX1JrVUNXSgBbyMCluwaJYTWJ--fDd" frameborder="0" allowfullscreen></iframe>
     
-### JSON Data Example {-}
+#### JSON Data Example {-}
 
 JSON ^[[Wikipedia entry for JSON](https://en.wikipedia.org/wiki/JSON)] is JavaScript Object Notation a data wrapper.  The API, in this case, returns the data in a JSON format.
 

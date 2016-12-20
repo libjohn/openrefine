@@ -100,9 +100,7 @@ Watch this excellent and brief Video Introduction.  It only takes a few minutes.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/B70J_H_zAWM?list=UUqwSVsJ8CWD9pQUZDbJC1ew" frameborder="0" allowfullscreen></iframe>
 </div>
 
-foo
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/B70J_H_zAWM?list=UUqwSVsJ8CWD9pQUZDbJC1ew" frameborder="0" allowfullscreen></iframe>
 
 
 

@@ -15,7 +15,7 @@
 * 5) 21,982
 
 ###  mass edit cells {#appendix-mass-edit -}
-* 2) 3 ; 9668
+* 2) 3 ; 9668 ([answer](#mass-edit))
 * 3) 9671
 
 
