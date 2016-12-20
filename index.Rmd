@@ -9,7 +9,8 @@ output:
 documentclass: book
 biblio-style: apalike
 link-citations: yes
-github-repo: libjohn/libjohn.github.io
+github-repo: libjohn/openrefine
+output_dir: "~/R/github/libjoh.github.io/foo"
 description: "This lab workbook contains hands-on material supplementing the OpenRefine workshops"
 ---
 <!-- gitbook(css="style.css") --> <!-- use this, not render_book(), below -->
