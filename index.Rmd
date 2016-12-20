@@ -18,12 +18,15 @@ description: "This lab workbook contains hands-on material supplementing the Ope
   envir = parent.frame(), clean_envir = !interactive(), 
   output_dir = NULL, new_session = NA, preview = FALSE, 
   encoding = "UTF-8") -->
-
+  
 # Preface {-}
 
 This lab workbook contains hands-on material supplementing the OpenRefine workshops taught by John Little and hosted by the Data & Visualization Services Department, Duke University Libraries. 
 
 &nbsp;  
+
+![](images/data-cleaning.png)
+
 
 &nbsp;  
 
