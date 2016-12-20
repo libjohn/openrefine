@@ -3,13 +3,13 @@
 ## Hands-on Answers {-}
 
 ### facets {#appendix-facets -}
-* 1) 21,982 rows
+* 1) 21,982 rows ([return](#handson-facets))  
 * 3) 7633 choices
 * 4) SCREEN PORCH ; 233
 * 8) 238
 
-### cluster {#appendix-cluster -}
-* 1) 340
+### compound facets {#appendix-compound -}
+* 1) 340 ([return](#compound-facets))
 * 2) 578
 * 4) 3; both
 * 5) 21,982
@@ -19,7 +19,7 @@
 * 3) 9671
 
 
-### custom Facets {-}
+### custom facets {-}
 (how many matching rows have no location data)
 *  2.c)  There are 10576 matching rows without location data
 

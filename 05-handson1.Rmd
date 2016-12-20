@@ -27,24 +27,25 @@ It's IMPORTANT to properly shutdown the application.  OpenRefine will automatica
 **Mac**:  Click the OR app in the doc, invoke Quit
 
 
-NOTE:  It is possible, but not guaranteed, to lose data if you don't’ follow the rather unintuitive shutdown procedures.  Better safe than sorry.
+NOTE:  It is possible, but not guaranteed, to lose data if you don't follow the rather unintuitive shutdown procedures.  Better safe than sorry.
 
 
 ## Facets & Cluster
 
 
-### Facets {-}
+### Facet & Cluster {#handson-facets -}
 Goal 1:  Create a facet of authorized work.  Cluster & Merge types of authorized work.
 
 1. *How many rows are in this dataset?* ([answers are found in the appendix](#appendix-facets))
 2. Slide the bottom column navigation bar to the right
     + find the authorized_work column 
     + click the column header:  authorized_work > Facet > Text facet
-3. *How many facets are there?*  ([answer](#appendix-facets))
-4. In the Facet box, click “count”.  
-    + *What is the 4th most popular type of authorized work?  How permits are authorized?*  ([answer](#appendix-facets))
-5. Find spelling clusters by clicking the “Cluster” button in the facet box
-6. Using the “Select All” button “Merge Selected & Re-Cluster” all terms 
+3. *How many facets are there?*  ([answer](#appendix-facets))  
+4. In the Facet box, click `count`.  
+    + *What is the 4th most popular type of authorized work?* ([answer](#appendix-facets))
+    + *How many permits are recorded?*  
+5. To find spelling clusters, click the `Cluster` button in the facet box
+6. Using the `Select All` button `Merge Selected & Re-Cluster` all terms 
 by the defaults (Method = “key collision” ; Keying Function = “fingerprint”)
 7. Do the same for the “ngram-fingerprint” Keying Function, then close the 
 Cluster & Edit dialog box
@@ -53,20 +54,20 @@ Cluster & Edit dialog box
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QjXkUoFykkk?list=PLIUcX1JrVUNXSgBbyMCluwaJYTWJ--fDd" frameborder="0" allowfullscreen></iframe>
 
 
-### Clustering {-}  
+### Compound Facets {#compound-facets -}  
 
 1. Select the DECK Facet.  
-    + *How many matching rows match the Deck Facet?*  ([answer](#appendix-cluster))
-2. Select the SCREEN PORCH facet combined with the DECK Facet.  
-    + *Now how many matching rows exist?*  ([answer](#appendix-cluster))
+    + *How many matching rows match the Deck Facet?*  ([answer](#appendix-compound))
+2. Select the SCREEN PORCH facet combined with the DECK Facet. (Hover your mouse over the facet, click `include`) 
+    + *Now how many matching rows exist?*  ([answer](#appendix-compound))
 3. On the “land_use_code” column, make a text facet and limit to “SINGLE FAMILY”  
 4. On the “county” column, make a text facet and limit to Durham County (DURH)  
-    + *How many “Single Family” homes got permits in Durham County for Screen Porches or Decks?*  ([answer](#appendix-cluster))
-    + *Is the authorized work for Screen Porches, Decks, or both?*  ([answer](#appendix-cluster))
+    + *How many “Single Family” homes got permits in Durham County for Screen Porches or Decks?*  ([answer](#appendix-compound))
+    + *Is the authorized work for Screen Porches, Decks, or both?*  ([answer](#appendix-compound))
 5. Click the “Remove All” button to remove all text facets.  
-    + *How many matching rows are in the dataset now?*  ([answer](#appendix-cluster))
+    + *How many matching rows are in the dataset now?*  ([answer](#appendix-compound))
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QjXkUoFykkk?list=PLIUcX1JrVUNXSgBbyMCluwaJYTWJ--fDd" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/orkVO4ORV-4?list=PLIUcX1JrVUNXSgBbyMCluwaJYTWJ--fDd" frameborder="0" allowfullscreen></iframe>
 
 ### Mass Editing {-}
 It's important to understand OpenRefine was designed to transform data in bulk.  It is possible to edit single data cells but it is not as convenient as some other, more WYSWIG, tools.  This exercise will help you learn how to accomplish these kinds of mass data transformations

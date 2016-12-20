@@ -10,7 +10,7 @@ documentclass: book
 biblio-style: apalike
 link-citations: yes
 github-repo: libjohn/openrefine
-description: "This lab workbook contains hands-on material supplementing the OpenRefine workshops taught by John Little and hosted by the Data & Visualization Services Department, Duke University Libraries. "
+description: "This lab workbook contains hands-on material supplementing the OpenRefine workshops taught by John Little and hosted by the [Data & Visualization Services Department](http://library.duke.edu/data), Duke University Libraries. "
 ---
 <!-- gitbook(css="style.css") --> <!-- use this, not render_book(), below -->
 <!-- render_book("index.Rmd", output_format = NULL, clean = TRUE, 

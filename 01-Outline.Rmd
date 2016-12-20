@@ -73,7 +73,7 @@ Excel Formula | `INDEX(salary!$C$1:$C$4,MATCH(1,('player DB'!$A2=salary!$A$1:$A$
 
 ### General {-}
 
-[OpenRefine](http://openrefine.org) is an **open source data cleaning** and **transformation** application used when [Data Wrangling](https://en.wikipedia.org/wiki/Data_wrangling
+[OpenRefine](http://openrefine.org) is an **open source data cleaning** and **transformation** application used for [Data Wrangling](https://en.wikipedia.org/wiki/Data_wrangling).
 
 * Refine looks like a spreadsheet but it's really a database  
     + There is an OpenRefine statistical extension for simple statistics  
@@ -96,8 +96,13 @@ Excel Formula | `INDEX(salary!$C$1:$C$4,MATCH(1,('player DB'!$A2=salary!$A$1:$A$
 ### Video {-}
 Watch this excellent and brief Video Introduction.  It only takes a few minutes.  And then watch part 2 and part 3 to expand your knowledge.  
 
+<div class="video">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/B70J_H_zAWM?list=UUqwSVsJ8CWD9pQUZDbJC1ew" frameborder="0" allowfullscreen></iframe>
+</div>
 
+foo
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B70J_H_zAWM?list=UUqwSVsJ8CWD9pQUZDbJC1ew" frameborder="0" allowfullscreen></iframe>
 
 
 
