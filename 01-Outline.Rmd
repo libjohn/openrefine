@@ -9,7 +9,7 @@ Duke University Libraries
 
 ## Workshop Structure {-}
 
-[tl;dr](https://en.wiktionary.org/wiki/tl;dr)...  OpenRefne = good.  This workbook suplements the in-person workshop.  [Skip to the hands-on](#start) sections.
+**tl;dr...**  OpenRefne = good; data cleaning = good; learn by doing; [Skip to the hands-on](#start) sections in this workbook suplement to the in-person workshop.
 
 ### Testimonial {-}  
 
@@ -36,7 +36,7 @@ I offer this workshop frequently, at least once a semester and you can watch a r
 
 
 ## For best results {-}
-1. The hands-on approach includes a reliance on the [data-science](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram) notion of **"[hacking](https://datajobs.com/what-is-data-science)"** (not "cracking").  Pay attention to what you are seeing, what you are typing, what happens, what transforms, the end-result vis-a-vis the initial state of the data.  
+1. The hands-on approach includes a reliance on the [data-science](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram) notion of "[hacking](https://datajobs.com/what-is-data-science)" (not "cracking").  Pay attention to what you are seeing, what you are typing, what happens, what transforms, the end-result vis-a-vis the initial state of the data.  
 2. Learn by doing  
 3. Learn *best* by working on your own project  
 4. Set up an appointment for consultations -- http://v.gd/littleconsult
@@ -53,8 +53,9 @@ I offer this workshop frequently, at least once a semester and you can watch a r
     + Clean up data inconsistencies using powerful **clustering** and edit algorithms 
     + Transforming Data 
 * Advanced power comes from Regular Expressions implementation via GREL  
+* Web scraping:  API orchestration, HTML/JSON parsing
 * Why Use OpenRefine? 
-    + **you don't want to be a data engineer**, but you need to fix your data
+    + you don't want to be a data engineer, but you need to fix your data
         + Don't have to deal with file handling  
         + Don't have to deal with iterating (looping logic)  
         + Don't have to write complex conditional statements  
@@ -63,6 +64,7 @@ I offer this workshop frequently, at least once a semester and you can watch a r
     + Or, you are a subject matter expert and Refine is the right tool for the job
 * Frequently, OpenRefine is simpler to use than Excel for data transformations
     + Regular Expressions vs. Excel Formulas ^[The regex v excel-formul table is not a "fair fight" but it does illustrate what all regular expression users understand:   regex is a better tool than excel formulas for data cleaning.]
+
 
 |  Expression Language | Expression |
 |---|------------------------------------------------------------------------|
