@@ -29,7 +29,9 @@ It has been [written](https://www.nytimes.com/2014/08/18/technology/for-big-data
 
 ## Workshop Video {-}
 
-I offer this workshop frequently, at least once a semester.  You can watch a [previous recording of the workshop](http://library.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=96a8fb5b-36dc-4d8b-b9db-cc6eef6b7c24).
+I offer this workshop frequently, at least once a semester and you can watch a recording of this OpenRefine workshop (below).  On the [DVS workshop recordings](http://library.duke.edu/data/news/past-workshops) page you will  find the second and third parts of a workshop series going into more detail on [Regular Expressions](http://library.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=dd4cd7cc-6aa7-4084-a229-615f3aebe6bd) and [Web Scraping](http://library.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=5da46414-bd58-41e3-8ff1-3ecb1ad45fae).
+
+<iframe src="http://library.capture.duke.edu/Panopto/Pages/Embed.aspx?id=c1f9011d-d97a-4d5a-90fd-6c39082c8d3a&v=1" width="720" height="480" style="padding: 0px; border: 1px solid #464646;" frameborder="0"></iframe>
 
 
 
