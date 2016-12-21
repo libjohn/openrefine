@@ -72,7 +72,7 @@ The [General Refine Expression Language](https://github.com/OpenRefine/OpenRefin
 
 ### Regular Expression {-}  
 
-Regular Expressions can vary a lot.  You can match nearly any pattern with a "regex".  
+Regular Expressions are very powerful and flexible codes used for matching patterns.  Often there is more than one way to compose a regex pattern-match.  Importantly for OpenRefine, much of Refine's extensible and advanced power comes from regular expressions.  Essentially the key to advanced level OpenRefine is regular expressions and looping.  To learn more about regular expressions see my [handout on regex](http://libjohn.github.io/regex/regex.html).  For now you can refer to these **few commands** and symbols summed up on this [quick-sheet](http://libjohn.github.io/regex/cheat-sheet.html).
 
 7.  Create New Column from Existing Column using a regular expression to match a pattern  
     + <span class="or-menu">INC DATETIME > Edit column > Add column based on this column ... </span>   
