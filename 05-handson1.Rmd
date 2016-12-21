@@ -14,9 +14,9 @@ We'll use a **subset**[^1] of [Raleigh Building Permits data](https://github.com
 4. Select:  Columns are separated by “commas (CSV)”
 5. Change the Project Name to `Raleigh Building Permits` and click Create Project >> (top-right) 
 
-
+<div class="video"> 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lPN6fHjmzZA?list=PLIUcX1JrVUNXSgBbyMCluwaJYTWJ--fDd" frameborder="0" allowfullscreen></iframe>
-
+</div>
 
 ## Shutting Down OpenRefine
 
@@ -51,8 +51,9 @@ by the defaults (Method = “key collision” ; Keying Function = “fingerprint
 Cluster & Edit dialog box
 8. *How many SCREEN PORCH facets now exist?* ([answer](#appendix-facets))
 
+<div class="video"> 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QjXkUoFykkk?list=PLIUcX1JrVUNXSgBbyMCluwaJYTWJ--fDd" frameborder="0" allowfullscreen></iframe>
-
+</div>
 
 ### Compound Facets {#compound-facets -}  
 
@@ -67,7 +68,9 @@ Cluster & Edit dialog box
 5. Click the “Remove All” button to remove all text facets.  
     + *How many matching rows are in the dataset now?*  ([answer](#appendix-compound))
 
+<div class="video"> 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/orkVO4ORV-4?list=PLIUcX1JrVUNXSgBbyMCluwaJYTWJ--fDd" frameborder="0" allowfullscreen></iframe>
+<div class="video"> 
 
 ### Mass Editing {#mass-edit -}
 It's important to understand OpenRefine was designed to transform data in bulk.  It is possible to edit single data cells but it is not as convenient as some other, more WYSWIG, tools.  This exercise will help you learn how to accomplish these kinds of mass data transformations
@@ -82,7 +85,9 @@ It's important to understand OpenRefine was designed to transform data in bulk. 
 the same value
 6. Click “Remove All” to remove the facet window
 
+<div class="video">  
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2lrGWTXjgtw?list=PLIUcX1JrVUNXSgBbyMCluwaJYTWJ--fDd" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ## Split data in cells
 1. <span class="or-menu">address > Edit column > Split into several columns…</span>  
@@ -96,8 +101,9 @@ the same value
     
 (more data transformation could be done, but let’s move on for now…)
 
-
+<div class="video"> 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gURKGsumqRw?list=PLIUcX1JrVUNXSgBbyMCluwaJYTWJ--fDd" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ## Concatenate cells together
 1. <span class="or-menu">square_feet > Edit column > Add column based on this column…</span>  
@@ -122,7 +128,7 @@ Looking at the latitude and longitude cells, one column appears in green text (i
 3. <span class="or-menu">longitude > Edit cells > Transform… </span>
     + Expression = `value.replace(")","")`
     
-    ![search and replace using GREL](images/searchReplace.PNG)
+    <img src="images/searchReplace.PNG" alt="image of expression dialog box" class="center" />
 
 ## Web Scraping
 
@@ -166,8 +172,9 @@ Now parse the value of the JSON data “fips” element; call the “<span class
     * New column name = `FIPS Code`  
     * expression = `value.parseJson().Results.county[0].fips`  
     * Note the square-bracket (`[0]`) notiation in the `ParseJson()` function denotes and identifies the first array element.  It's the first element because in OpenRefine counting begins with zero (e.g. 0,1,2,3,4,5).  The <span class="highlight-turq-fixed">county</span> array in the example below consists of only 1 value element (consisting of four, named key/value pairs; of which fips is one key).  Since the JSON notation indicates county is an array, in this case of quantity 1, we identify that first element of the array by the number '0'.  See the JSON example below   
-    
+<div class="video">     
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DbjpmVEpMiI?list=PLIUcX1JrVUNXSgBbyMCluwaJYTWJ--fDd" frameborder="0" allowfullscreen></iframe>
+<div class="video">     
     
 #### JSON Data Example {-}
 

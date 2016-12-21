@@ -5,12 +5,12 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: 
   bookdown::gitbook:
-    css: style.css?
+    css: style.css
 documentclass: book
 biblio-style: apalike
 link-citations: yes
-github-repo: libjohn/openrefine
-output_dir: "~/R/github/libjoh.github.io/foo"
+github-repo: libjohn/openrefine  
+output_dir: "~/R/github/libjoh.github.io/foo"  
 description: "This lab workbook contains hands-on material supplementing the OpenRefine workshops"
 ---
 <!-- gitbook(css="style.css") --> <!-- use this, not render_book(), below -->
@@ -20,14 +20,11 @@ description: "This lab workbook contains hands-on material supplementing the Ope
   encoding = "UTF-8") -->
   
 # Preface {-}
-
 This lab workbook contains hands-on material supplementing the OpenRefine workshops taught by John Little and hosted by the Data & Visualization Services Department, Duke University Libraries. 
 
-&nbsp;  
-
-![](images/data-cleaning.png)
+<img src="images/data-cleaning.png" alt="cover image" class="center" /> 
 
 
 &nbsp;  
 
-![This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License")  Data, presentation, and handouts are shareable under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.](https://creativecommons.org/licenses/by-nc-sa/4.0/)(CC BY-NC-SA license)
+![This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License")  Data and workbook are shareable under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.](https://creativecommons.org/licenses/by-nc-sa/4.0/)(CC BY-NC-SA license)

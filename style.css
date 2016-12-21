@@ -29,12 +29,17 @@
 em {
   font-variant: small-caps;
 }
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto  
+}
 div.video {
-display: block;
-width: 100%;
+ display: block;
+ width: 100%; 
 }
 div.video iframe {
-width: 70%; /* or, leave this line out and control width in the iframe code */
-margin-left: 15%; /* or, set to auto */
-margin-right: 15% /* or, set to auto */
+  width: 70%; /* or, leave this line out and control width in the iframe code */
+  margin-left: 15%; /* or, set to auto */
+  margin-right: 15% /* or, set to auto */
 }
