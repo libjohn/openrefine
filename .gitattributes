@@ -1,3 +1,4 @@
-*.Rmd linguist-language=R
+*.Rmd linguist-language=RMarkdown
 *.R linguist-language=R
-output/* _book
+*.css linguist-language=CSS
+_book/* linguist-documentation
