@@ -41,6 +41,7 @@ Goal 1:  Create a facet of authorized work.  Cluster & Merge types of authorized
     + find the authorized_work column 
     + click the column header:  authorized_work > Facet > Text facet
 3. *How many facets are there?*  ([answer](#appendix-facets))  
+    + You may see a program warning, a [dialog-box error](images/facet_max_number.png) prompting you to <i>set the maxiumum number of choices show in the text facet</i>.  Accept the default and proceed.
 4. In the Facet box, click `count`.  
     + *What is the 4th most popular type of authorized work?* ([answer](#appendix-facets))
     + *How many permits are recorded?*  
@@ -143,7 +144,7 @@ We want to gather the FIPS code for a subset of the data.  The government server
 3. <span class="or-menu"> authorized_work > Facet > Text facet </span>
 4. select the “3 SEASON ROOM” facet
 
-You should now have 5 matching rows.  
+You should now have 6 matching rows.  
 
 ### API {-}
 
