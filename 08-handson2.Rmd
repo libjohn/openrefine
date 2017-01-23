@@ -6,7 +6,7 @@ In this example you  will open a new data set to practice importing a different 
 
 ## Custom Facets
 
-### Download new Data then Create a new OpenRefine Project: {-} 
+### Download new Data then Create a new OpenRefine Project: {#grel-compound -} 
 
 We'll use a **subset**[^2] of data from the Raleigh Open Data portal:  “Raleigh Police Incident Data 2005plus2014.csv”.  
 
@@ -18,8 +18,7 @@ We'll use a **subset**[^2] of data from the Raleigh Open Data portal:  “Raleig
 2. **Isolate data**: you have incident data without location information  
     - <span class="or-menu">Location > Facet > Customized facets > Facet by blank</span> 
     - Click true  (True = cell is blank ; False = cell has data)  
-    - _How many matching rows have no location data?_   
-
+    - _How many matching rows have no location data?_ ([answer](#appendix-grel))  
 
 > Explanation  
 In the step above, you limited your data set to find all the police incident data where there is no location information.  That is, when the cell is blank,there there is no location information.
@@ -43,7 +42,7 @@ To take PM (or AM), use `value[20,22]`
     + <span class="or-menu">INC DATETIME > Facet > Custom text facet ... </span>   
     + Expression = `value[6,10]` <span class="or-menu">> OK </span>   
 4. Sort the facet by Count  
-    + _Which year has the most missing data?_  
+    + _Which year has the most missing data?_  ([answer](#appendix-grel))  
     + _How many rows match that year?_  
     + Click “**Remove All**” in the Facet/Filter sidebar  
 5. Keep only the data with location values, i.e. delete all rows that have  
@@ -83,7 +82,7 @@ Regular Expressions are very powerful and flexible codes used for matching patte
 8. Create a Text Filter:  Explore your data to find how many incident descriptions involve bicycles
     1. <span class="or-menu">LCR DESC >Text filter </span>   
     2. In the filter box, enter the term bicycle  
-    3. _How many matching rows of data use the word “Bicycle” in the description?_  
+    3. _How many matching rows of data use the word “Bicycle” in the description?_ ([answer](#appendix-grel))  
 
 ### Facet  {-}  
 9. Make a Text Facet on the LCR DESC column  
@@ -99,19 +98,19 @@ Regular Expressions are very powerful and flexible codes used for matching patte
     + <span class="or-menu">FELONY > Edit cells > Cluster and edit … </span>  
         + Method = “key collision” ; Key Function = “metaphone3”  
     + For each row, check “Merge?” and change the “New Cell Value” 
-        1. to Felony in the first row  
-        2. to Not Felony in the second row  
-        3. Merge & Re-Cluster  
-        4. Try other Methods and Key Functions  
+        1. to `Felony` in the first row  
+        2. to `Not Felony` in the second row  
+        3. click the "Merge Selected & Re-Cluster" button    
+        4. Try other "Methods" and "Keying Functions".  "Merge Selected & Re-Cluster" after each operation  
         5. Close   
-        6._How many “Not Felony” bicycle larcenies were recorded?_
+        6._How many “Not Felony” bicycle larcenies were recorded?_ ([answer](#appendix-grel))  
         
 ### Mass Editing {-}  
-11.  Mass Edit cells in LCR DESC Facet  
+11. Mass Edit cells in LCR DESC Facet: `LCR DESC > Facet > Text facet`   
     + Mouseover & Edit “LARCENY/BICYCLE/FELONY/$200- …”  
     + delete “/FELONY” 
     + Add an “S” to ‘BICYCLE’ > Apply 
-12. _How many rows match the "LARCENY/BICYCLES ($200-$1000)" Category_  
+12. _How many rows match the "LARCENY/BICYCLES ($200-$1000)" Category_ ([answer](#appendix-grel))   
 13. Export as an Excel File  
     + <span class="or-menu">Export > Excel </span>   
 
