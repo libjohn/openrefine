@@ -33,7 +33,7 @@ I like to think of this workshop and workbook as a cooking metaphor. I'll introd
 
 It has been [written](https://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html) that 80% of any data project is data cleaning.  And further, 80% of any data cleaning project is tedious while the remaining 20% is  confusing.  
 
-```{r pie1, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+```{r pie1, echo=FALSE, message=FALSE, warning=FALSE}
 category1 <- c("Tedious", "Confusing")
 category2 <- c("Easy", "Interesting")
 portion <- c(80, 20)
@@ -48,15 +48,15 @@ lbls2 <- paste(lbls2, "%", sep="")
 pie(portion, labels = lbls1, col = rainbow(length(lbls1)), main="Before OpenRefine")
 ```
 
-<img src="images/pie1-1.png" alt="Before OpenRefine" class="center" /> 
+<!-- img src="images/pie1-1.png" alt="Before OpenRefine" class="center" / --> 
 
 I prefer to **think of data cleaning as a puzzle** rather than as a tedium.  Good data cleaning is a necessary step that, if given short shrift, will become problematic and still have to be addressed.   But since this is not an analysis book I'll just remind you of the The old adage: "garbage in, garbage out".  To cheer you up, keep in mind that if the bulk of any data project involves data cleaning, you may as well have the best tools at your fingertips and you may as well do a good job.  And you may as well enjoy the puzzle.  
 
-```{r pie2, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+```{r pie2, echo=FALSE, message=FALSE, warning=FALSE}
 pie(portion, labels = lbls2, col = rainbow(length(lbls2)), main="After OpenRefine")
 ```
 
-<img src="images/pie2-1.png" alt="After OpenRefine" class="center" /> 
+<!-- img src="images/pie2-1.png" alt="After OpenRefine" class="center" / --> 
 
 One reason data cleaning is such a challenge is that information is naturally unstructured.  Meanwhile, most analysis tools prefer precise data structures.  Transforming your unstructure mass  into a proper structure is often as idiosyncratic as the data you are trying to analyze.  Therefore, I invite you to learn about data cleaning in this workshop.  Then meet with me when you have a specific project in mind.  I'll be happy to help you further.  (If you're reading this preface, and not enrolled in one of my workshops at Duke University, maybe you can get help on the [OpenRefine Mailing List](http://openrefine.org/documentation.html).  I'm there too, and there are many more knowledgeable people there as well.)
 
