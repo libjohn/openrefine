@@ -17,7 +17,8 @@ Basically you are making minor changes to the shape of the data by transforming 
 library(readxl)
 library(knitr)
 library(tidyverse)
-salary <- read_excel("~/R/github/openrefine/data/salary.xlsx", 
+salary <- read_excel("data/salary.xlsx", 
+# salary <- read_excel("~/R/github/openrefine/data/salary.xlsx", 
                      sheet = "2013-2014", col_names = FALSE)
 ```
 

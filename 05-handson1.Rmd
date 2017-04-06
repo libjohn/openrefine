@@ -15,12 +15,12 @@ We'll use a **subset**[^1] of [Raleigh Building Permits data](https://github.com
 5. Change the Project Name to `Raleigh Building Permits` and click Create Project >> (top-right) 
 
 <div class="video"> 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lPN6fHjmzZA?list=PLIUcX1JrVUNXSgBbyMCluwaJYTWJ--fDd" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lPN6fHjmzZA" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ## Shutting Down OpenRefine
 
-It's IMPORTANT to properly shutdown the application.  OpenRefine will automatically save your project as you transform your data. **However**, in my experience your **last opertion** *may* have to be **manually saved** by following the procedures below...
+It's IMPORTANT to properly shutdown the application.  OpenRefine will automatically save your project as you transform your data. **However**, in my experience your **last operation** *may* have to be **manually saved** by following the procedures below...
 
 
 **Windows**:  `Control-C`
@@ -36,24 +36,49 @@ NOTE:  It is possible, but not guaranteed, to lose data if you don't follow the 
 ### Facet & Cluster {#handson-facets -}
 Goal 1:  Create a facet of authorized work.  Cluster & Merge types of authorized work.
 
-1. *How many rows are in this dataset?* ([answers are found in the appendix](#appendix-facets))
+<ol>
+<div class="challenge">
+<li>How many rows are in this dataset? (click to reveal answer)</li>
+<p>**Answer:** &nbsp;21,982 rows</p>
+</div>
+</ol>
 2. Slide the bottom column navigation bar to the right
     + find the authorized_work column 
     + click the column header:  authorized_work > Facet > Text facet
-3. *How many facets are there?*  ([answer](#appendix-facets))  
-    + You may see a program warning, a [dialog-box error](images/facet_max_number.png) prompting you to <i>set the maxiumum number of choices show in the text facet</i>.  Accept the default and proceed.
+
+<ol start="3">
+<div class="challenge">
+<li>How many facets are there?</li>
+<p>**Answer:** &nbsp;7633 choices</p>
+</div>
+<ul><li>You may see a program warning, a dialog-box error message [screen shot](images/facet_max_number.png) prompting you to <i>set the maximum number of choices show in the text facet</i>.  If so, accept the default and proceed.</li></ul>
+</ol>
+
 4. In the Facet box, click `count`.  
-    + *What is the 4th most popular type of authorized work?* ([answer](#appendix-facets))
-    + *How many permits are recorded?*  
+<ul>
+<div class="challenge">
+<li>What is the 4th most popular type of authorized work?</li>
+<p>**Answer:** &nbsp;SCREEN PORCH</p>
+</div>
+<div class="challenge">
+<li>How many permits are recorded?</li>
+<p>**Answer:** &nbsp; 233</p>
+</div>
+</ul>
+
 5. To find spelling clusters, click the `Cluster` button in the facet box
-6. Using the `Select All` button `Merge Selected & Re-Cluster` all terms 
-by the defaults (Method = “key collision” ; Keying Function = “fingerprint”)
-7. Do the same for the “ngram-fingerprint” Keying Function, then close the 
-Cluster & Edit dialog box
-8. *How many SCREEN PORCH facets now exist?* ([answer](#appendix-facets))
+6. Click the `Select All` button, then the `Merge Selected & Re-Cluster` button, to merge all terms (accepting the default: Method = “key collision” ; Keying Function = “fingerprint”)
+7. Repeat previous step using the “ngram-fingerprint” Keying Function, then close the Cluster & Edit dialog box
+
+<ol start="8">
+<div class="challenge">
+<li>How many SCREEN PORCH facets now exist?</li>
+<p>**Answer:** &nbsp;238. Compare to your answer in #4 above.</p>
+</div>
+</ol>
 
 <div class="video"> 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QjXkUoFykkk?list=PLIUcX1JrVUNXSgBbyMCluwaJYTWJ--fDd" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QjXkUoFykkk" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ### Compound Facets {#compound-facets -}  
@@ -70,7 +95,7 @@ Cluster & Edit dialog box
     + *How many matching rows are in the dataset now?*  ([answer](#appendix-compound))
 
 <div class="video"> 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/orkVO4ORV-4?list=PLIUcX1JrVUNXSgBbyMCluwaJYTWJ--fDd" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/orkVO4ORV-4" frameborder="0" allowfullscreen></iframe>
 <div class="video"> 
 
 ### Mass Editing {#mass-edit -}
@@ -87,7 +112,7 @@ the same value
 6. Click “Remove All” to remove the facet window
 
 <div class="video">  
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2lrGWTXjgtw?list=PLIUcX1JrVUNXSgBbyMCluwaJYTWJ--fDd" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2lrGWTXjgtw" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ## Split data in cells
@@ -103,7 +128,7 @@ the same value
 (more data transformation could be done, but let’s move on for now…)
 
 <div class="video"> 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gURKGsumqRw?list=PLIUcX1JrVUNXSgBbyMCluwaJYTWJ--fDd" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gURKGsumqRw" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ## Concatenate cells together
@@ -172,9 +197,9 @@ Now parse the value of the JSON data “fips” element; call the “<span class
 6. <span class="or-menu"> JSON data > Edit column > Add column based on this column ... </span> 
     * New column name = `FIPS Code`  
     * expression = `value.parseJson().Results.county[0].fips`  
-    * Note the square-bracket (`[0]`) notiation in the `ParseJson()` function denotes and identifies the first array element.  It's the first element because in OpenRefine counting begins with zero (e.g. 0,1,2,3,4,5).  The <span class="highlight-turq-fixed">county</span> array in the example below consists of only 1 value element (consisting of four, named key/value pairs; of which fips is one key).  Since the JSON notation indicates county is an array, in this case of quantity 1, we identify that first element of the array by the number '0'.  See the JSON example below   
+    * Note the square-bracket (`[0]`) notation in the `ParseJson()` function denotes and identifies the first array element.  It's the first element because in OpenRefine counting begins with zero (e.g. 0,1,2,3,4,5).  The <span class="highlight-turq-fixed">county</span> array in the example below consists of only 1 value element (consisting of four, named key/value pairs; of which fips is one key).  Since the JSON notation indicates county is an array, in this case of quantity 1, we identify that first element of the array by the number '0'.  See the JSON example below   
 <div class="video">     
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DbjpmVEpMiI?list=PLIUcX1JrVUNXSgBbyMCluwaJYTWJ--fDd" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DbjpmVEpMiI" frameborder="0" allowfullscreen></iframe>
 <div class="video">     
     
 #### JSON Data Example {-}
@@ -198,6 +223,12 @@ JSON ^[[Wikipedia entry for JSON](https://en.wikipedia.org/wiki/JSON)] is JavaSc
   }  
 }  
 </pre>
+
+
+<!-- special thanks to the folks at software carpentry.  I riffed from their
+workshop template to create the Q&A javacript/style.  See https://github.com/swcarpentry/workshop-template -->
+<script src="assets/js/qa.js"></script>
+
 
 
 

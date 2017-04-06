@@ -2,13 +2,6 @@
 
 ## Hands-on Answers {-}
 
-### facets {#appendix-facets -}
-
-* 1) 21,982 rows ([return](#handson-facets))  
-* 3) 7633 choices
-* 4) SCREEN PORCH ; 233
-* 8) 238
-
 ### compound facets {#appendix-compound -}
 
 * 1) 340 ([return](#compound-facets))
