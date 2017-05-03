@@ -33,79 +33,127 @@ NOTE:  It is possible, but not guaranteed, to lose data if you don't follow the 
 ## Facets & Cluster
 
 
-### Facet & Cluster {#handson-facets -}
+### Facet & Cluster
 Goal 1:  Create a facet of authorized work.  Cluster & Merge types of authorized work.
 
-<ol>
-<div class="challenge">
-<li>How many rows are in this dataset? (click to reveal answer)</li>
-<p>**Answer:** &nbsp;21,982 rows</p>
-</div>
-</ol>
+1. <ul class="no-bullet">
+     <div class="challenge">
+     <li>How many rows are in this dataset?</li>
+     <p>21,982 rows</p>
+     </div>
+     </ul>
+
 2. Slide the bottom column navigation bar to the right
     + find the authorized_work column 
-    + click the column header:  authorized_work > Facet > Text facet
-
-<ol start="3">
-<div class="challenge">
-<li>How many facets are there?</li>
-<p>**Answer:** &nbsp;7633 choices</p>
-</div>
-<ul><li>You may see a program warning, a dialog-box error message [screen shot](images/facet_max_number.png) prompting you to <i>set the maximum number of choices show in the text facet</i>.  If so, accept the default and proceed.</li></ul>
-</ol>
+    + click the column header:  <span class="or-menu">authorized_work > Facet > Text facet</span>
+    
+3. <ul class="no-bullet">
+     <div class="challenge">
+     <li>How many facets are there?</li>
+     <p>7633 choices</p>
+     </div>
+   </ul>
+       - You may see a program warning, a dialog-box error message [screen shot](images/facet_max_number.png) prompting you to <i>set the maximum number of choices show in the text facet</i>.  If so, accept the default and proceed.
 
 4. In the Facet box, click `count`.  
-<ul>
-<div class="challenge">
-<li>What is the 4th most popular type of authorized work?</li>
-<p>**Answer:** &nbsp;SCREEN PORCH</p>
-</div>
-<div class="challenge">
-<li>How many permits are recorded?</li>
-<p>**Answer:** &nbsp; 233</p>
-</div>
-</ul>
+    - <ul class="no-bullet">
+     <div class="challenge">
+     <li>What is the 4th most popular type of authorized work?</li>
+     <p>SCREEN PORCH</p>
+     </div>
+     </ul>
+    - <ul class="no-bullet">
+     <div class="challenge">
+     <li>How many permits are recorded?</li>
+     <p>233</p>
+     </div>
+     </ul>
 
 5. To find spelling clusters, click the `Cluster` button in the facet box
 6. Click the `Select All` button, then the `Merge Selected & Re-Cluster` button, to merge all terms (accepting the default: Method = “key collision” ; Keying Function = “fingerprint”)
 7. Repeat previous step using the “ngram-fingerprint” Keying Function, then close the Cluster & Edit dialog box
-
-<ol start="8">
-<div class="challenge">
-<li>How many SCREEN PORCH facets now exist?</li>
-<p>**Answer:** &nbsp;238. Compare to your answer in #4 above.</p>
-</div>
-</ol>
+8. <ul class="no-bullet">
+     <div class="challenge">
+     <li>How many SCREEN PORCH facets now exist?</li>
+     <p>238 - Compare to your answer in #4 above</p>
+     </div>
+     </ul>
 
 <div class="video"> 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QjXkUoFykkk" frameborder="0" allowfullscreen></iframe>
 </div>
 
-### Compound Facets {#compound-facets -}  
+### Compound Facets 
 
 1. Select the DECK Facet.  
-    + *How many matching rows match the Deck Facet?*  ([answer](#appendix-compound))
+<ul>
+<div class="challenge">
+<li>How many matching rows match the Deck Facet? (click to reveal answer)</li>
+<p>340 matching rows</p>
+</div>
+</ul>
+
+
 2. Select the SCREEN PORCH facet combined with the DECK Facet. (Hover your mouse over the facet, click `include`) 
-    + *Now how many matching rows exist?*  ([answer](#appendix-compound))
+<ul>
+<div class="challenge">
+<li>Now how many matching rows exist?</li>
+<p>578 matching rows</p>
+</div>
+</ul>    
+
 3. On the “land_use_code” column, make a text facet and limit to “SINGLE FAMILY”  
 4. On the “county” column, make a text facet and limit to Durham County (DURH)  
-    + *How many “Single Family” homes got permits in Durham County for Screen Porches or Decks?*  ([answer](#appendix-compound))
-    + *Is the authorized work for Screen Porches, Decks, or both?*  ([answer](#appendix-compound))
+<ul>
+<div class="challenge">
+<li>How many “Single Family” homes got permits in Durham County for Screen Porches or Decks?</li>
+<p>3</p>
+</div>
+<div class="challenge">
+<li>Is the authorized work for Screen Porches, Decks, or both?</li>
+<p>both</p>
+</div>
+</ul>    
+
 5. Click the “Remove All” button to remove all text facets.  
-    + *How many matching rows are in the dataset now?*  ([answer](#appendix-compound))
+<ul>
+<div class="challenge">
+<li>How many matching rows are in the dataset now?</li>
+<p>21,982</p>
+</div>
+</ul>  
+
+
 
 <div class="video"> 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/orkVO4ORV-4" frameborder="0" allowfullscreen></iframe>
-<div class="video"> 
+</div class="video"> 
 
-### Mass Editing {#mass-edit -}
+
+### Mass Editing
 It's important to understand OpenRefine was designed to transform data in bulk.  It is possible to edit single data cells but it is not as convenient as some other, more WYSWIG, tools.  This exercise will help you learn how to accomplish these kinds of mass data transformations
 
 1. Make a facet on the work_type_description column
 2. There are two facets for new buildings:  “NEW BUILDING” and “New Building”.
-    + *How many “NEW BUILDING” rows exist; how many “New Building” rows exist?* ([answer](#appendix-mass-edit))
+<ul>
+<div class="challenge">
+<li>How many “NEW BUILDING” rows exist? (click to reveal answer)</li>
+<p>3 matching rows</p>
+</div>
+<div class="challenge">
+<li>how many “New Building” rows exist?</li>
+<p>9,668 matching rows</p>
+</div>
+</ul>
+
 3. Select “NEW BUILDING” facet, limiting to 3 matching rows.  Hover your mouse over the all caps “NEW BUILDING” facet until you see the “edit” feature appear; click “edit” and alter the text to title case:  “New Building” ; click Apply
-    + *How many “New Building” rows exist now?* ([answer](#appendix-mass-edit))
+<ul>
+<div class="challenge">
+<li>How many “New Building” rows exist now?</li>
+<p>9,671 matching rows</p>
+</div>
+</ul>
+
 4. Mass edit “OTHER” & “Other” so they have the same value
 5. Mass edit “ALTERNATIONS/REPAIRS” and “Alternations/repairs” so they have 
 the same value
@@ -133,8 +181,8 @@ the same value
 
 ## Concatenate cells together
 1. <span class="or-menu">square_feet > Edit column > Add column based on this column…</span>  
-    1. New column name = `Full Description`
-    2. Expression = `value + cells["proposed_work"].value`
+    a. New column name = `Full Description`
+    b. Expression = `value + cells["proposed_work"].value`
 
 The last step adds two columns together, but the preview screen is hard to read. Make it readable by using the next expression instead ...  
 

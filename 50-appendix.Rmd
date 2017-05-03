@@ -1,30 +1,5 @@
 # (APPENDIX) Appendix {-} 
 
-## Hands-on Answers {-}
-
-### compound facets {#appendix-compound -}
-
-* 1) 340 ([return](#compound-facets))
-* 2) 578
-* 4) 3; both
-* 5) 21,982
-
-###  mass edit cells {#appendix-mass-edit -}
-
-* 2) 3 ; 9668 ([return](#mass-edit))
-* 3) 9671
-
-
-### GREL: Custom Facets, filter, cluster and edit, mass edit {#appendix-grel -}
-
-* 2) How many matching rows have no location data?  10576   ([return](#grel-compound))  
-* 4) 2005 has the most missing data with 10007 rows missing location data  
-* 8) 251 matching rows  
-* 10) There are 234 "Not Felony" items after clustering using both "key collision" and "nearest neighbor" methods of clustering
-* 12) There are 115 observatins (or rows) matching "LARCENY/BICYCLES ($200-$1,000)" category
-
-
-
 ## Additional Documentation {-}
 
 * [Documentaion, "The Book", and Mailing List](http://openrefine.org/documentation.html)

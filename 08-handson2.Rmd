@@ -6,7 +6,7 @@ In this example you  will open a new data set to practice importing a different 
 
 ## Custom Facets
 
-### Download new Data then Create a new OpenRefine Project: {#grel-compound -} 
+### Download new Data then Create a new OpenRefine Project:  
 
 We'll use a **subset**[^2] of data from the Raleigh Open Data portal:  “Raleigh Police Incident Data 2005plus2014.csv”.  
 
@@ -16,9 +16,14 @@ We'll use a **subset**[^2] of data from the Raleigh Open Data portal:  “Raleig
     * You many want to give your project a pretty title
     * Create Project >>  
 2. **Isolate data**: you have incident data without location information  
-    - <span class="or-menu">Location > Facet > Customized facets > Facet by blank</span> 
-    - Click true  (True = cell is blank ; False = cell has data)  
-    - _How many matching rows have no location data?_ ([answer](#appendix-grel))  
+    - <span class="or-menu">Location > Facet > Customized facets > Facet by blank</span>
+    - Click true  (True = cell is blank ; False = cell has data)
+    - <ul class="no-bullet">
+           <div class="challenge">
+           <li>How many matching rows have no location data?</li>
+           <p>10,576</p>
+           </div>
+           </ul>   
 
 > Explanation  
 In the step above, you limited your data set to find all the police incident data where there is no location information.  That is, when the cell is blank,there there is no location information.
@@ -34,17 +39,30 @@ Position:  0123  6    1        2
                       1        0
 </pre>
 
-To take the year“2014”, use expression: `value[6,10]`[^3]  
-To take the hour, use `value[11,13]`  
-To take PM (or AM), use `value[20,22]`  
+> For Example...  
+    - To take the year“2014”, use expression: `value[6,10]`[^3]  
+    - To take the hour, use `value[11,13]`  
+    - To take PM (or AM), use `value[20,22]`  
 
 3. Create a Custom Facet to Sort by Year 
     + <span class="or-menu">INC DATETIME > Facet > Custom text facet ... </span>   
-    + Expression = `value[6,10]` <span class="or-menu">> OK </span>   
-4. Sort the facet by Count  
-    + _Which year has the most missing data?_  ([answer](#appendix-grel))  
-    + _How many rows match that year?_  
-    + Click “**Remove All**” in the Facet/Filter sidebar  
+    + Expression = `value[6,10]` <span class="or-menu"> > OK </span>  
+
+<ol start="4">
+<li>Sort the facet by Count</li>
+<ul>  
+<div class="challenge">  
+<li>Which year has the most missing data?</li>  
+<p>2005</p>  
+</div>  
+<div class="challenge">  
+<li>How many rows match that year?</li>  
+<p>10,007 rows with missing location data</p>  
+</div>  
+<li>Click “**Remove All**” in the Facet/Filter sidebar</li>  
+</ul>  
+</ol>
+    
 5. Keep only the data with location values, i.e. delete all rows that have  
 no location data...  
     + <span class="or-menu">Location > Facet > Customized facets > Facet by blank </span>   
@@ -63,10 +81,10 @@ The [General Refine Expression Language](https://github.com/OpenRefine/OpenRefin
         + <span class="or-menu">Location 2 > Edit column > Rename this column > `Longitude` </span>   
     + Remove parenthesis and trim whitespace  
         + <span class="or-menu">Latitude > Edit cells > Transform ... </span>  
-            1. Expression - `value.replace("(","")` <span class="or-menu">> OK </span>   
+            1. Expression = `value.replace("(","")` <span class="or-menu">> OK </span>   
             2. <span class="or-menu">Latitude > Edit cells > Common transformations > Trim leading and trailing whitespace </span>   
         + <span class="or-menu">Longitude > Edit cells > Transform ... </span>   
-            1. Expression - `value.replace(")","")` <span class="or-menu">> OK </span>   
+            1. Expression = `value.replace(")","")` <span class="or-menu">> OK </span>   
             2. <span class="or-menu">Longitude > Edit cells > Common transformations > Trim leading and trailing whitespace </span>   
 
 ### Regular Expression {-}  
@@ -79,16 +97,33 @@ Regular Expressions are very powerful and flexible codes used for matching patte
         2. Expression = `value.match(/.*\/(\d{4}).*/)[0]` > <span class="or-menu">OK</span>[^4]
         
 ### Filter  {-}  
-8. Create a Text Filter:  Explore your data to find how many incident descriptions involve bicycles
-    1. <span class="or-menu">LCR DESC >Text filter </span>   
-    2. In the filter box, enter the term bicycle  
-    3. _How many matching rows of data use the word “Bicycle” in the description?_ ([answer](#appendix-grel))  
+8. Create a Text Filter:  Explore your data to find how many incident descriptions involve bicycles  
+<ol type="1">
+<li><span class="or-menu">LCR DESC >Text filter </span></li>
+<li>In the filter box, enter the term `bicycle`</li>
+<div class="challenge"> 
+<li>How many matching rows of data use the word "bicycle" in the description?</li>
+<p>251</p>
+</div>
+</ol> 
 
 ### Facet  {-}  
-9. Make a Text Facet on the LCR DESC column  
-    1. <span class="or-menu">LCR DESC > Facet > Text facet </span>   
-    2. _How many Bicycle categories exist in the facet window?_  
-    3. _Which facet is most often used “LCR DESC” facet?_  
+
+<ol start="9">
+<li>Make a Text Facet on the LCR DESC column</li>
+<ol>
+<li><span class="or-menu">LCR DESC > Facet > Text facet</span></li>  
+<div class="challenge">  
+<li>How many Bicycle categories exist in the facet window?</li>  
+<p>6</p>  
+</div>
+<div class="challenge">  
+<li>Which facet is most often used “LCR DESC” facet?</li>  
+<p>LARCENY/BICYCLES ($50-$199) - 119</p>  
+</div>
+</ol>
+</ol>
+
 
 ### Cluster  {-}  
 
@@ -98,21 +133,37 @@ Regular Expressions are very powerful and flexible codes used for matching patte
     + <span class="or-menu">FELONY > Edit cells > Cluster and edit … </span>  
         + Method = “key collision” ; Key Function = “metaphone3”  
     + For each row, check “Merge?” and change the “New Cell Value” 
-        1. to `Felony` in the first row  
-        2. to `Not Felony` in the second row  
-        3. click the "Merge Selected & Re-Cluster" button    
-        4. Try other "Methods" and "Keying Functions".  "Merge Selected & Re-Cluster" after each operation  
-        5. Close   
-        6._How many “Not Felony” bicycle larcenies were recorded?_ ([answer](#appendix-grel))  
+        i. to `Felony` in the first row  
+        i. to `Not Felony` in the second row  
+        i. click the "Merge Selected & Re-Cluster" button    
+        i. Try other "Methods" and "Keying Functions".  "Merge Selected & Re-Cluster" after each operation  
+        i. Close
+        i. <ul class="no-bullet">
+           <div class="challenge">
+           <li>How many “Not Felony” bicycle larcenies were recorded?</li>
+           <p>There are 234 “Not Felony” items after clustering using both “key collision” and “nearest neighbor” methods of clustering</p>
+           </div>
+           </ul>         
+        
+
         
 ### Mass Editing {-}  
-11. Mass Edit cells in LCR DESC Facet: `LCR DESC > Facet > Text facet`   
+11. Mass Edit cells in LCR DESC Facet: <span class="or-menu">LCR DESC > Facet > Text facet</span>
     + Mouseover & Edit “LARCENY/BICYCLE/FELONY/$200- …”  
     + delete “/FELONY” 
     + Add an “S” to ‘BICYCLE’ > Apply 
-12. _How many rows match the "LARCENY/BICYCLES ($200-$1000)" Category_ ([answer](#appendix-grel))   
+12. <ul class="no-bullet">
+     <div class="challenge">
+     <li>How many rows match the "LARCENY/BICYCLES ($200-$1000)" Category</li>
+     <p>There are 115 observatins (or rows) matching “LARCENY/BICYCLES ($200-$1,000)” category</p>
+     </div>
+     </ul>
 13. Export as an Excel File  
     + <span class="or-menu">Export > Excel </span>   
+
+<!-- special thanks to the folks at software carpentry.  I riffed from their
+workshop template to create the Q&A javacript/style.  See https://github.com/swcarpentry/workshop-template -->
+<script src="assets/js/qa.js"></script>
 
 
 [^2]:  Original Data Source:  [Raleigh Open Data](https://data.raleighnc.gov/)

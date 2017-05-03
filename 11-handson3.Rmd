@@ -55,7 +55,6 @@ kable(
     * <span class="or-menu">Create Project  > Web Addresses (URLs) > </span>  `https://github.com/libjohn/openrefine/raw/master/data/salary.xlsx`
     * <span class="or-menu">Next >> </span>  
     * You many want to give your project a pretty title
-    * <span class="or-menu">Create Project >> </span> 
     * Parse data as 
         1. Worksheets to Import: 
             + **Check** "2013-2014 666 rows"
@@ -81,7 +80,12 @@ kable(
 5. Make a column for team name and fill it.  
     + Isolate team-name rows using a facet on the blank cells in the Salary column  
         1. <span class="or-menu">Salary > Facet > Customized facets > Facet by blank </span> 
-            + Why do you think **this doesn’t work**? Those cells are actually filled with an invisible space (`\s`).  They’re not actually blank and only appear blank. So,  **regular expressions** to the rescue!  
+            + <ul class="no-bullet">
+               <div class="challenge">
+               <li>Why do you think **this doesn’t work**?</li>
+               <p>Those cells are actually filled with whitespace -- invisible to the naked eye but legitimate characters for a computer:  a space (`\s`).  They’re not actually blank and only appear blank. So,  **regular expressions** to the rescue!  </p>
+               </div>
+               </ul>
         2. Close the facet  
     + <span class="or-menu">Salary > Text filter > check "regular expression" > `^\s`  </span> 
         + `\s` means “a space”; `^` means “must begin the line”  
@@ -103,3 +107,8 @@ kable(
     6. Close (or "X out") the Salary text filter
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/20plnBsmz_A?list=PLIUcX1JrVUNXSgBbyMCluwaJYTWJ--fDd" frameborder="0" allowfullscreen></iframe>
+
+
+<!-- special thanks to the folks at software carpentry.  I riffed from their
+workshop template to create the Q&A javacript/style.  See https://github.com/swcarpentry/workshop-template -->
+<script src="assets/js/qa.js"></script>
