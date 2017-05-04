@@ -6,7 +6,7 @@ In this example you  will open a new data set to practice importing a different 
 
 ## Custom Facets
 
-### Download new Data then Create a new OpenRefine Project:  
+### Download new Data then Create a new OpenRefine Project: {-}  
 
 We'll use a **subset**[^2] of data from the Raleigh Open Data portal:  “Raleigh Police Incident Data 2005plus2014.csv”.  
 

@@ -33,7 +33,7 @@ NOTE:  It is possible, but not guaranteed, to lose data if you don't follow the 
 ## Facets & Cluster
 
 
-### Facet & Cluster
+### Facet & Cluster {-}
 Goal 1:  Create a facet of authorized work.  Cluster & Merge types of authorized work.
 
 1. <ul class="no-bullet">
@@ -83,76 +83,77 @@ Goal 1:  Create a facet of authorized work.  Cluster & Merge types of authorized
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QjXkUoFykkk" frameborder="0" allowfullscreen></iframe>
 </div>
 
-### Compound Facets 
+### Compound Facets {-}
 
 1. Select the DECK Facet.  
-<ul>
-<div class="challenge">
-<li>How many matching rows match the Deck Facet? (click to reveal answer)</li>
-<p>340 matching rows</p>
-</div>
-</ul>
-
+    - <ul class="no-bullet">
+    <div class="challenge">
+    <li>How many matching rows match the Deck Facet?</li>
+    <p>340 matching rows</p>
+    </div>
+    </ul>
 
 2. Select the SCREEN PORCH facet combined with the DECK Facet. (Hover your mouse over the facet, click `include`) 
-<ul>
-<div class="challenge">
-<li>Now how many matching rows exist?</li>
-<p>578 matching rows</p>
-</div>
-</ul>    
+    - <ul class="no-bullet">
+    <div class="challenge">
+    <li>Now how many matching rows exist?</li>
+    <p>78 matching rows</p>
+    </div>
+    </ul>
 
 3. On the “land_use_code” column, make a text facet and limit to “SINGLE FAMILY”  
 4. On the “county” column, make a text facet and limit to Durham County (DURH)  
-<ul>
-<div class="challenge">
-<li>How many “Single Family” homes got permits in Durham County for Screen Porches or Decks?</li>
-<p>3</p>
-</div>
-<div class="challenge">
-<li>Is the authorized work for Screen Porches, Decks, or both?</li>
-<p>both</p>
-</div>
-</ul>    
+    - <ul class="no-bullet">
+    <div class="challenge">
+    <li>How many “Single Family” homes received permits in Durham County for Screen Porches or Decks?</li>
+    <p>3</p>
+    </div>
+    </ul>
+    - <ul class="no-bullet">
+    <div class="challenge">
+    <li>Is the authorized work for Screen Porches, Decks, or both?</li>
+    <p>both</p>
+    </div>
+    </ul>
 
 5. Click the “Remove All” button to remove all text facets.  
-<ul>
-<div class="challenge">
-<li>How many matching rows are in the dataset now?</li>
-<p>21,982</p>
-</div>
-</ul>  
-
-
+    - <ul class="no-bullet">
+    <div class="challenge">
+    <li>How many matching rows are in the dataset now?</li>
+    <p>21,982</p>
+    </div>
+    </ul>
 
 <div class="video"> 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/orkVO4ORV-4" frameborder="0" allowfullscreen></iframe>
 </div class="video"> 
 
 
-### Mass Editing
+### Mass Editing {-}
 It's important to understand OpenRefine was designed to transform data in bulk.  It is possible to edit single data cells but it is not as convenient as some other, more WYSWIG, tools.  This exercise will help you learn how to accomplish these kinds of mass data transformations
 
 1. Make a facet on the work_type_description column
 2. There are two facets for new buildings:  “NEW BUILDING” and “New Building”.
-<ul>
-<div class="challenge">
-<li>How many “NEW BUILDING” rows exist? (click to reveal answer)</li>
-<p>3 matching rows</p>
-</div>
-<div class="challenge">
-<li>how many “New Building” rows exist?</li>
-<p>9,668 matching rows</p>
-</div>
-</ul>
+    - <ul class="no-bullet">
+    <div class="challenge">
+    <li>How many “NEW BUILDING” rows exist? (click to reveal answer)</li>
+    <p>3 matching rows</p>
+    </div>
+    </ul>
+    - <ul class="no-bullet">
+    <div class="challenge">
+    <li>how many “New Building” rows exist?</li>
+    <p>9,668 matching rows</p>
+    </div>
+    </ul>
 
 3. Select “NEW BUILDING” facet, limiting to 3 matching rows.  Hover your mouse over the all caps “NEW BUILDING” facet until you see the “edit” feature appear; click “edit” and alter the text to title case:  “New Building” ; click Apply
-<ul>
-<div class="challenge">
-<li>How many “New Building” rows exist now?</li>
-<p>9,671 matching rows</p>
-</div>
-</ul>
+    - <ul class="no-bullet">
+    <div class="challenge">
+    <li>How many “New Building” rows exist now?</li>
+    <p>9,671 matching rows</p>
+    </div>
+    </ul>
 
 4. Mass edit “OTHER” & “Other” so they have the same value
 5. Mass edit “ALTERNATIONS/REPAIRS” and “Alternations/repairs” so they have 
