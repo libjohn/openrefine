@@ -33,7 +33,7 @@ I like to think of this workshop and workbook as a cooking metaphor. I'll introd
 
 It has been [written](https://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html) that 80% of any data project is comprised of *data cleaning*.  
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 par(mar = c(0, 1, 0, 1))
 pie(
   c(288, 72),
@@ -44,9 +44,11 @@ pie(
 ```
 
 
+<img src="images/pie-1.png" alt="Data Project Elements" class="center" width="672"/>
+
 Furthermore, of that 80% -- the part of your data project comprised of data cleaning -- 80% of that data cleaning is *tedious* while the remaining 20% is *confusing*.  
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 par(mar = c(0, 1, 0, 1))
 pie(
   c(288, 72),
@@ -56,11 +58,11 @@ pie(
 )
 ```
 
-
+<img src="images/pie-2.png" alt="Data Cleaning Elements" class="center" width="672"/>
 
 I prefer to think of data cleaning as a puzzle rather than a tedium.  Data cleaning is a necessary step. If given short shrift, your data will become problematic and the clearning process will still have to be addressed.   Finally, since this is not an analysis book,  let me remind you of the the old adage: "garbage in, garbage out".  Clean your data and decrease the chances of producing garbage.  Keeping in mind that the bulk of any data project involves data cleaning, you may as well have the best tools at your fingertips; you may as well do a good job; and you may as well enjoy the puzzle. OpenRefine to the rescue... 
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 par(mar = c(0, 1, 0, 1))
 pie(
   c(288, 72),
@@ -68,6 +70,8 @@ pie(
   col = c('#339999', '#235F9C'),
   init.angle = 54, border = T, main='\n\nData Cleaning in the C.O.R. Era \n "Common Open Refine Era"')
 ```
+
+<img src="images/pie-3.png" alt="Data Cleaning with OpenRefine" class="center" width="672"/>
 
 One reason data cleaning is such a challenge is that information is naturally unstructured.  Meanwhile, most analysis tools prefer precise data structures.  Transforming your unstructure mass  into a proper structure is often as idiosyncratic as the data you are trying to analyze.  Therefore, I invite you to learn about data cleaning in this workshop.  Then meet with me when you have a specific project in mind.  I'll be happy to help you further.  (If you're reading this preface, and not enrolled in one of my workshops at Duke University, maybe you can get help on the [OpenRefine Mailing List](http://openrefine.org/documentation.html).  There you will find many helpful and knowledgeable people willing to help you learn.)
 
