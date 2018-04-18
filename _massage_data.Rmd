@@ -27,17 +27,20 @@ temp
 update the link here by creating a new variable, "new_link"
 
 ```{r}
-temp %>% 
+new_bicycle_metadata <- temp %>% 
   mutate(new_link = paste0(
     "https://collection.maas.museum/object/",
     str_split(`Persistent Link`, "=", 
               simplify = TRUE)[,2]))
+
+new_bicycle_metadata <- new_bicycle_metadata %>% 
+  select(1:10, 17, everything())
 ```
 
 # Write data as TSV
 
 ```{r}
-write_tsv(temp, "data/new_url.tsv")
+write_tsv(new_bicycle_metadata, "data/new_url.tsv")
 ```
 
 
