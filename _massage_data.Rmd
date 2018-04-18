@@ -1,0 +1,49 @@
+---
+title: "transform data to update the URL"
+author: "John Little"
+date: "`r Sys.Date()`"
+output: html_notebook
+---
+
+The PowerHouse Museum updated their target website.  Thus their "Persistent Links" are no longer accurate for web scraping.  They do auto-forward to the new target URL.  But, for purposes of the tutorial, I'm updating "Persistent link to the latest URL"
+
+# Load Packages
+
+```{r}
+library(tidyverse)
+```
+
+# Load Data
+
+```{r}
+temp <- read_delim("data/bicycle-subset-phm-collection.tsv", 
+    "\t", escape_double = FALSE, trim_ws = TRUE)
+
+temp
+```
+
+# Transform Data
+
+update the link here by creating a new variable, "new_link"
+
+```{r}
+temp %>% 
+  mutate(new_link = paste0(
+    "https://collection.maas.museum/object/",
+    str_split(`Persistent Link`, "=", 
+              simplify = TRUE)[,2]))
+```
+
+# Write data as TSV
+
+```{r}
+write_tsv(temp, "data/new_url.tsv")
+```
+
+
+# Document Session Info
+
+```{r}
+devtools::session_info()
+```
+
