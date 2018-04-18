@@ -8,4 +8,4 @@ This Workshop workbook is shareable at this URL https://libjohn.github.io/openre
 
 ## Render the Book:
 
-`render_book("inidex.Rmd", new_session = TRUE)`
+`render_book("index.Rmd", new_session = TRUE)`
