@@ -36,8 +36,8 @@ kable(
 
 ```{r wrangled-table, echo=FALSE}
 salary <- salary %>% 
-  mutate(Team = ifelse(is.na(X1), X0, NA)) %>% 
-  select(Player = X0, Team, Salary = X1, Notes = X2) %>% 
+  mutate(Team = ifelse(is.na(X__2), X__1, NA)) %>% 
+  select(Player = X__1, Team, Salary = X__2, Notes = X__3) %>% 
   fill(Team) %>% 
   filter(!is.na(Salary))
 
