@@ -97,7 +97,7 @@ Goal 1:  Create a facet of authorized work.  Cluster & Merge types of authorized
     - <ul class="no-bullet">
     <div class="challenge">
     <li>Now how many matching rows exist?</li>
-    <p>78 matching rows</p>
+    <p>578 matching rows</p>
     </div>
     </ul>
 
@@ -132,7 +132,7 @@ Goal 1:  Create a facet of authorized work.  Cluster & Merge types of authorized
 ### Mass Editing {-}
 It's important to understand OpenRefine was designed to transform data in bulk.  It is possible to edit single data cells but it is not as convenient as some other, more WYSWIG, tools.  This exercise will help you learn how to accomplish these kinds of mass data transformations
 
-1. Make a facet on the work_type_description column
+1. Make a *Text facet* on the work_type_description column
 2. There are two facets for new buildings:  “NEW BUILDING” and “New Building”.
     - <ul class="no-bullet">
     <div class="challenge">
