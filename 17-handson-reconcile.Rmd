@@ -1,4 +1,4 @@
-# Reconciliation
+# Hand's On: Reconciliation
 
 ipsum lupsum  ^[https://data-lessons.github.io/dh-openrefine/05-advance-functions/]  and ^[http://refine.codefork.com/]
 
