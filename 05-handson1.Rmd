@@ -147,7 +147,7 @@ It's important to understand OpenRefine was designed to transform data in bulk. 
     </div>
     </ul>
 
-3. Select “NEW BUILDING” facet, limiting to 3 matching rows.  Hover your mouse over the all caps “NEW BUILDING” facet until you see the “edit” feature appear; click “edit” and alter the text to title case:  “New Building” ; click Apply
+3. Select “NEW BUILDING” facet, limiting to 3 matching rows. To the right of the “NEW BUILDING” facet,  hover your mouse over   the “edit” feature; click “edit” and alter the text to title case:  “New Building” ; click Apply
     - <ul class="no-bullet">
     <div class="challenge">
     <li>How many “New Building” rows exist now?</li>
@@ -156,7 +156,7 @@ It's important to understand OpenRefine was designed to transform data in bulk. 
     </ul>
 
 4. Mass edit “OTHER” & “Other” so they have the same value
-5. Mass edit “ALTERNATIONS/REPAIRS” and “Alternations/repairs” so they have 
+5. Mass edit “ALTERATIONS/REPAIRS” and “Alterations/repairs” so they have 
 the same value
 6. Click “Remove All” to remove the facet window
 
