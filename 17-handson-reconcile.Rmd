@@ -1,4 +1,4 @@
-# Hands On: Reconciliation
+# Hands-on: Reconciliation
 
 OpenRefine's *[Reconciliation](https://github.com/OpenRefine/OpenRefine/wiki/Reconciliation)* service is used to semi-automate the process of matching data in OpenRefine fields with more authoritative data in external sources.  This reconciliation function is called **semi**-automated because the end-user is given the opportunity to interactively approve or select which data are modified by choosing from a pick-list of results. This process can be used to improve and standardize individual data fields or columns of data inside of OpenRefine.  Or it can be used to extend the data in OpenRefine.
 

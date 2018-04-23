@@ -10,9 +10,6 @@ For this project you will take data in one format and reshape into a more optima
 3. Transforming:  Adding columns and using fill-down to fill in data  
 
 
-Basically you are making minor changes to the shape of the data by transforming some horizontal data into a more vertical format.  This is a common data wrangling need.  Below are two tables, cropped, to briefly illustrate the before data wrangling table \@ref(tab:before-table) and after data wrangling result \@ref(tab:wrangled-table). I encourage you to [download](https://github.com/libjohn/openrefine/raw/master/data/salary.xlsx) the Excel spreadsheet to look through the raw data.^[The data, “Salary.xslx”, are NBA salary data.]  Doing so will help you see how the data transformation progresses.  
-
-
 ```{r table-prep, message=FALSE, warning=FALSE, echo=FALSE}
 library(readxl)
 library(knitr)
@@ -23,8 +20,11 @@ salary <- read_excel("data/salary.xlsx",
 ```
 
 
+Basically you are making minor changes to the shape of the data by transforming some horizontal data into a more vertical format.  This is a common data wrangling need.  Below are two tables, cropped, to briefly illustrate the before data wrangling table \@ref(tab:beforetable) and after data wrangling result \@ref(tab:wrangled-table). I encourage you to [download](https://github.com/libjohn/openrefine/raw/master/data/salary.xlsx) the Excel spreadsheet to look through the raw data.^[The data, “Salary.xslx”, are NBA salary data.]  Doing so will help you see how the data transformation progresses.  
 
-```{r before-table, echo=FALSE}
+
+
+```{r beforetable, echo=FALSE}
 # tbl_df(salary)
 kable(
   head(tail(salary[, 1:3], -15), 10), booktabs = TRUE, 
@@ -32,9 +32,7 @@ kable(
 )
 ```
 
-
-
-```{r wrangled-table, echo=FALSE}
+```{r wrangled-table, echo=FALSE, message=FALSE, warning=FALSE}
 salary <- salary %>% 
   mutate(Team = ifelse(is.na(X__2), X__1, NA)) %>% 
   select(Player = X__1, Team, Salary = X__2, Notes = X__3) %>% 
