@@ -189,17 +189,20 @@ The last step adds two columns together, but the preview screen is hard to read.
 
 2. Expression = `value + " sq ft. " + cells["proposed_work"].value` > OK
 
-## More Transformations
+## Search & Replace, Plus More 
 
 Looking at the latitude and longitude cells, one column appears in green text (indicating OpenRefine considers data those cells as numbers) and one column appears in black with a closing parenthesis in the last position.  Convert both columns to text, trim leading and trailing spaces, and then find and replace the parenthesis
 
-### Data Types {-}    
+### Convert Data Types {-}    
 1. <span class="or-menu">latitude > Edit cells > common transformations > To text</span>  
 
-### Whitespace {-}   
+### Remove Whitespace {-}   
 2. <span class="or-menu">longitude > Edit cells > common transformations > Trim leading and trailing whitespace </span>  
 
 ### Search & Replace {-}  
+
+**Search and Replace** is commonly performed as a data transformation using the following function:  `value.search("old text","new text")`.  In the example below we replace a closing parenthesis with nothing, effectively removing the trailing parenthesis.  The example may appear strange since the `replace` function exists within a set of parenthesis.  Remember the text you are replacing is idnetified within the first set of quotation marks  You will identify as the replacing text within the second set of quotation marks.  I've draw red circles around the function, as well as the before and after text preview to clarify how the process will work.
+
 3. <span class="or-menu">longitude > Edit cells > Transform… </span>
     + Expression = `value.replace(")","")`
     
