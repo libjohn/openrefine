@@ -87,7 +87,7 @@ The [General Refine Expression Language](https://github.com/OpenRefine/OpenRefin
             1. Expression = `value.replace(")","")` <span class="or-menu">> OK </span>   
             2. <span class="or-menu">Longitude > Edit cells > Common transformations > Trim leading and trailing whitespace </span>   
 
-### Regular Expression {-}  
+## Regular Expression {-}  
 
 Regular Expressions are very powerful and flexible codes used for matching patterns.  Often there is more than one way to compose a regex pattern-match.  Importantly for OpenRefine, much of Refine's extensible and advanced power comes from regular expressions.  Essentially the key to advanced level OpenRefine is regular expressions and looping.  To learn more about regular expressions see my [handout on regex](http://libjohn.github.io/regex/regex.html).  For now you can refer to these **few commands** and symbols summed up on this [quick-sheet](http://libjohn.github.io/regex/cheat-sheet.html).
 
@@ -96,7 +96,7 @@ Regular Expressions are very powerful and flexible codes used for matching patte
         1. New column name = `YEAR`  
         2. Expression = `value.match(/.*\/(\d{4}).*/)[0]` > <span class="or-menu">OK</span>[^4]
         
-### Filter  {-}  
+## Filter Text {-}  
 8. Create a Text Filter:  Explore your data to find how many incident descriptions involve bicycles  
 <ol type="1">
 <li><span class="or-menu">LCR DESC >Text filter </span></li>
@@ -107,7 +107,7 @@ Regular Expressions are very powerful and flexible codes used for matching patte
 </div>
 </ol> 
 
-### Facet  {-}  
+## Facet  {-}  
 
 <ol start="9">
 <li>Make a Text Facet on the LCR DESC column</li>
@@ -125,7 +125,7 @@ Regular Expressions are very powerful and flexible codes used for matching patte
 </ol>
 
 
-### Cluster  {-}  
+## Cluster  {-}  
 
 10. Look for Cluster variations in the FELONY Column  
     + [Clustering](https://github.com/OpenRefine/OpenRefine/wiki/Clustering-In-Depth) refers to the operation of finding groups of different values that might be alternative representations of the same thing.  For example “Gödel" and "Godel".  This is a handy way to find spelling variations.  
@@ -147,7 +147,7 @@ Regular Expressions are very powerful and flexible codes used for matching patte
         
 
         
-### Mass Editing {-}  
+## Mass Editing via Facets{-}  
 11. Mass Edit cells in LCR DESC Facet: <span class="or-menu">LCR DESC > Facet > Text facet</span>
     + Mouseover & Edit “LARCENY/BICYCLE/FELONY/$200- …”  
     + delete “/FELONY” 
