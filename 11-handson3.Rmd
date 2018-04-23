@@ -1,5 +1,13 @@
 # Hands-on: reshape
 
+```{r table-prep, message=FALSE, warning=FALSE, echo=FALSE}
+library(readxl)
+library(knitr)
+library(tidyverse)
+salary <- read_excel("data/salary.xlsx", 
+                     sheet = "2013-2014", col_names = FALSE)
+```
+
 **Reshaping Your Data**  
 
 For this project you will take data in one format and reshape into a more optimal format for analysis.  We'll assume the analysis will be done in another tool.  OpenRefine can export data in multiple formats after the data has been wrangled into the proper structure.  In this lab we continue exploring how OpenRefine can import various data formats, this time Excel. 
@@ -10,21 +18,38 @@ For this project you will take data in one format and reshape into a more optima
 3. Transforming:  Adding columns and using fill-down to fill in data  
 
 
-```{r table-prep, message=FALSE, warning=FALSE, echo=FALSE}
-library(readxl)
-library(knitr)
-library(tidyverse)
-salary <- read_excel("data/salary.xlsx", 
-# salary <- read_excel("~/R/github/openrefine/data/salary.xlsx", 
-                     sheet = "2013-2014", col_names = FALSE)
-```
+The changes outline above are minor changes to the shape of the data.  The content of the data remains unchanged.  Basically you will transform the data to remove confusion in the first column.  You can see how the data will change by looking at the *before* and *after* examples, below.  In the *before* example (table \@ref(tab:beforetable)) there are different variable concepts in the first column:  **team** and **player**.  In the *after* example (table \@ref(tab:wrangled-table)) we move each concept (variable) into its own column. I encourage you to [download](https://github.com/libjohn/openrefine/raw/master/data/salary.xlsx) the Excel spreadsheet and look through the raw data. ^[The data, “Salary.xslx”, are NBA salary data.]  Doing so will help you see how the data transformation progresses.  
 
 
-Basically you are making minor changes to the shape of the data by transforming some horizontal data into a more vertical format.  This is a common data wrangling need.  Below are two tables, cropped, to briefly illustrate the before data wrangling table \@ref(tab:beforetable) and after data wrangling result \@ref(tab:wrangled-table). I encourage you to [download](https://github.com/libjohn/openrefine/raw/master/data/salary.xlsx) the Excel spreadsheet to look through the raw data.^[The data, “Salary.xslx”, are NBA salary data.]  Doing so will help you see how the data transformation progresses.  
+
+<div class="video">  
+<iframe width="560" height="315" 
+  src="https://www.youtube.com/embed/20plnBsmz_A?list=PLIUcX1JrVUNXSgBbyMCluwaJYTWJ--fDd" 
+  frameborder="0" 
+  allowfullscreen>
+</iframe>
+</div>
+<center>The video demonstrates how the data will be transformed in this exercise.</center>
 
 
+#### Before {-}
 
 ```{r beforetable, echo=FALSE}
+salary_before <- salary %>% 
+  rename(" " = X__1, "  " = X__2, "   " = X__3)
+salary_before %>% 
+  tail(-15) %>% 
+  head(10) %>% 
+  kable(booktabs = TRUE, 
+        caption = 'Unprocessed:  A selective 10 rows of the 2013-2014 Salary.xls data')
+```
+
+#### After {-}
+
+```{r eval=FALSE, include=FALSE}
+# IGNORE THIS code chunk
+# legacy code
+#
 # tbl_df(salary)
 kable(
   head(tail(salary[, 1:3], -15), 10), booktabs = TRUE, 
@@ -33,6 +58,25 @@ kable(
 ```
 
 ```{r wrangled-table, echo=FALSE, message=FALSE, warning=FALSE}
+salary_after <- salary %>% 
+  mutate(Team = ifelse(is.na(X__2), X__1, NA)) %>% 
+  select(Player = X__1, Team, Salary = X__2, Notes = X__3) %>% 
+  fill(Team) %>% 
+  drop_na(Salary)
+
+salary_after %>% 
+  tail(-14) %>% 
+  head(10) %>% 
+  kable(booktabs = TRUE, 
+        caption = 'Wrangled:  same 10 rows of the 2013-2014 Salary.xls data')
+```
+
+
+
+```{r eval=FALSE, include=FALSE}
+# IGNORE THIS code chunk
+# legacy code
+#
 salary <- salary %>% 
   mutate(Team = ifelse(is.na(X__2), X__1, NA)) %>% 
   select(Player = X__1, Team, Salary = X__2, Notes = X__3) %>% 
@@ -44,6 +88,8 @@ kable(
   caption = 'Wrangled:  same 10 rows of the 2013-2014 Salary.xls data'
 )  
 ```
+
+
 
 
 
@@ -103,8 +149,6 @@ kable(
     4. <span class="or-menu">Salary > Text filter > check "regular expression" > `^\s` </span>   
     5. <span class="or-menu">All > Edit rows > Remove all matching rows  </span>   
     6. Close (or "X out") the Salary text filter
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/20plnBsmz_A?list=PLIUcX1JrVUNXSgBbyMCluwaJYTWJ--fDd" frameborder="0" allowfullscreen></iframe>
 
 
 <!-- special thanks to the folks at software carpentry.  I riffed from their
