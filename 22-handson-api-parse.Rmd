@@ -1,0 +1,114 @@
+# Hands-on: Web Scraping
+
+Goal:  We want to gather the FIPS code for some data by matching a county name to a government server which maintains a server that enables FIPS lookups. The government server returns data in a JSON format.  After gathering the data we’ll parse the JSON format and isolate the particular data from the data wrapper.
+
+
+1. Open  Data  
+    * <span class="or-menu">Create Project  > Web Addresses (URLs) ></span>   `https://raw.githubusercontent.com/libjohn/openrefine/master/data/subset-Raleigh-Building-Permits-for-API-JSON-parsing.csv`   
+    * <span class="or-menu">Next >></span>  
+    * You many want to give your project a pretty title
+    * Create Project >> 
+
+You should now have 6 matching rows.  
+
+## API
+
+Now let’s fetch the data from a [Web API](http://www.broadbandmap.gov/developer/) made available via the National Broadband Map ([NBM](http://www.broadbandmap.gov/) | [NBM Developer](https://www.broadbandmap.gov/developer)). This API returns a FIPS code, given a county name (or in this case, even a partial county name.)
+
+
+2. Fetch JSON data from the National Broadband Map.  We’ll use the [API documentation for Geography by Name API](http://www.broadbandmap.gov/developer/api/census-api-by-geography-name)^[The documentation informs us that the format of the URL we want to construct is as follows:
+http://www.broadbandmap.gov/broadbandmap/census/county/durh?format=json ] which returns Census geography for a geography name (e.g. Durham).  In this case we simply use the County `value` as the search string wrapped in the API query protocol.
+    + <span class="or-menu"> county > Edit column > Add column by fetching URLs… </span>
+    + New column name = `JSON data`
+    + Throttle delay = `2000`
+    + Expression = <br>
+`'https://www.broadbandmap.gov/broadbandmap/census/county/'+value+'?format=json'`
+    + <span class="or-menu">OK</span>
+
+## Parse
+
+Now parse the value of the JSON data “fips” element; call the “<span class="highlight-yellow-fixed">fips</span>” key when traversing the “<span class="highlight-turq-fixed">county</span>” objects from the <span class="highlight-green-fixed">Results</span> set.
+
+
+3. <span class="or-menu"> JSON data > Edit column > Add column based on this column ... </span> 
+    * New column name = `FIPS Code`  
+    * expression = `value.parseJson().Results.county[0].fips` ^[Note the square-bracket (`[0]`) notation in the `ParseJson()` function denotes and identifies the first array element.  It's the first element because in OpenRefine counting begins with zero (e.g. 0,1,2,3,4,5).  The <span class="highlight-turq-fixed">county</span> array in the example below consists of only 1 value element (consisting of four, named key/value pairs; of which fips is one key).  Since the JSON notation indicates county is an array, in this case of quantity 1, we identify that first element of the array by the number '0'.  See the JSON example below]
+    * <span class="or-menu">OK</span>
+    
+    
+<div class="video">     
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DbjpmVEpMiI" frameborder="0" allowfullscreen></iframe>
+<div class="video">     
+    
+#### JSON Data Example {-}
+
+JSON ^[[Wikipedia entry for JSON](https://en.wikipedia.org/wiki/JSON)] is JavaScript Object Notation a data wrapper.  The API, in this case, returns the data in a JSON format.
+
+<pre>
+{
+  "status": "OK",  
+  "responseTime": 14,  
+  "message": [  ],  
+  "<span class="highlight-green-fixed">Results</span>": {  
+    "<span class="highlight-turq-fixed">county</span>": [  
+      {  
+        "geographyType": "COUNTY2010",  
+        "stateFips": "37",  
+        "<span class="highlight-yellow-fixed">fips</span>": "37063",  
+        "name": "Durham"  
+      }  
+    ]  
+  }  
+}  
+</pre>
+
+## Keys
+
+Web API keys are typically issued by the API service to help identify the origin of the API request.  Contrary to the above example, most API services require keys.  In this next example you'll practice getting and using a key.  In this case the key is free.  They are not always free.
+
+4. Go to the [OMDB API key request page](http://www.omdbapi.com/apikey.aspx).  Enter your email and choose the **free key** option.
+4. Check your email for your key.  You'll use this key appended to your search query.  The documentation for this API can found at their [Parameters](http://www.omdbapi.com/) section.  It's also helpful to have a look at the **Examples** section.
+
+## Exercise 2
+
+You'll need your API key from the preceding steps.
+
+6. Create a new project in OpenRefine
+4. Click the `Clipboard` option, under *Get data from* and paste in the following:
+
+```
+The Warriors
+Rocky
+Bambi
+```
+
+8. Give your project a nice name (e.g. "Movies") and <span class="or-menu">Create Project >></span>
+5. Fetch JSON data from the OMDB API
+
+    + <span class="or-menu"> Column 1 > Edit column > Add column by fetching URLs… </span>
+    + New column name = `JSON data`
+    + Throttle delay = `2000`
+    + Expression = <br>`'http://www.omdbapi.com/?t=' + escape(value, "url") + '&' + 'apikey=BOOBOOBOY'`
+    + Be sure to substitute your actual api key (see above) for `BOOBOOBOY`
+    + <span class="or-menu">OK</span>
+    
+### Parse {-}
+
+10. <span class="or-menu"> JSON data > Edit column > Add column based on this column ... </span> 
+
+    * New column name = `Year`  
+    * expression = `value.parseJson().Year` 
+    * <span class="or-menu">OK</span>
+ 
+10. <span class="or-menu"> JSON data > Edit column > Add column based on this column ... </span> 
+
+    * New column name = `Poster`  
+    * expression = `value.parseJson().Poster` 
+    * <span class="or-menu">OK</span>
+
+
+
+
+
+
+
