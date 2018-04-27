@@ -1,8 +1,8 @@
 # Hands-on: GREL {#grel}
 
-The goal of this project is to create custom facets and perform basic transformations, introduce you to the General Refine Expression Language, and develop practical skills in transforming and normalizing data.  
+The goal of this project is to create custom facets and perform basic transformations, introduce you to [GREL](https://github.com/OpenRefine/OpenRefine/wiki/General-Refine-Expression-Language) -- the General Refine Expression Language -- and develop practical skills in transforming and normalizing data.  You've used GREL several times getting to this point in this workbook, but lets look a little deeper.
 
-In this example you  will open a new data set to practice importing a different type of data, this time comma separated value, or CSV.  Last time you imported a tab separated value, or TSV.  OpenRefine will important many types of data.  Being aware of different data formats, and having the ability to open those data are valuable skills.  In fact, one of the most frequently stumbling blocks with data tools is the simple problem of importing the data.  Practice and learn...
+In this example you  will open a new data set to practice importing a different type of data, this time comma separated value, or CSV.  Last time you imported a tab separated value, or TSV.  OpenRefine will important many types of data.  Being aware of different data formats, and having the ability to open those data are valuable skills.  In fact, one of the most frequent stumbling blocks when using new data tools is the simple problem of importing the data.  Practice and learn...
 
 ## Custom Facets
 
@@ -89,12 +89,12 @@ The [General Refine Expression Language](https://github.com/OpenRefine/OpenRefin
 
 ## Regular Expression {-}  
 
-Regular Expressions are very powerful and flexible codes used for matching patterns.  Often there is more than one way to compose a regex pattern-match.  Importantly for OpenRefine, much of Refine's extensible and advanced power comes from regular expressions.  Essentially the key to advanced level OpenRefine is regular expressions and looping.  To learn more about regular expressions see my [handout on regex](http://libjohn.github.io/regex/regex.html).  For now you can refer to these **few commands** and symbols summed up on this [quick-sheet](http://libjohn.github.io/regex/cheat-sheet.html).
+Regular Expressions are very powerful and flexible codes used for matching patterns.  Often there is more than one way to compose a regex pattern-match.  Importantly for OpenRefine, much of Refine's extensible and advanced power comes from regular expressions.  Essentially the key to advanced level OpenRefine is regular expressions and looping.  To learn more about regular expressions see my [handout on regex](https://www.johnlittle.info/project/custom/regex/regex.html).  For now you can refer to these **few commands** and symbols summed up on this [quick-sheet](http://libjohn.github.io/regex/cheat-sheet.html).
 
 7.  Create New Column from Existing Column using a regular expression to match a pattern  
     + <span class="or-menu">INC DATETIME > Edit column > Add column based on this column ... </span>   
         1. New column name = `YEAR`  
-        2. Expression = `value.match(/.*\/(\d{4}).*/)[0]` > <span class="or-menu">OK</span>[^4]
+        2. Expression = `value.match(/.*\/(\d\d\d\d).*/)[0]` > <span class="or-menu">OK</span>[^4]
         
 ## Filter Text {-}  
 8. Create a Text Filter:  Explore your data to find how many incident descriptions involve bicycles  
