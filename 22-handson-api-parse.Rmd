@@ -88,8 +88,8 @@ Bambi
     + <span class="or-menu"> Column 1 > Edit column > Add column by fetching URLs… </span>
     + New column name = `JSON data`
     + Throttle delay = `2000`
-    + Expression = <br>`'http://www.omdbapi.com/?t=' + escape(value, "url") + '&' + 'apikey=BOOBOOBOY'`
-    + Be sure to substitute your actual api key (see above) for `BOOBOOBOY`
+    + Expression = <br>`'http://www.omdbapi.com/?t=' + escape(value, "url") + '&' + 'apikey=Yogi-and-BOO-BOO-BOY'`
+    + Be sure to substitute your actual api key (see above) for `Yogi-and-BOO-BOO-BOY`
     + <span class="or-menu">OK</span>
     
 ### Parse {-}
