@@ -28,9 +28,9 @@ description: "This lab workbook contains hands-on material supplementing the Ope
 
 This lab workbook contains hands-on material supplementing the OpenRefine workshops taught by [John Little](https://john.little.info/) and hosted by the [Data & Visualization Services Department](https://library.duke.edu/data/), Duke University Libraries. 
 
-Recent modification of this workbook were written to augement a series of [slide deck presentations](https://johnlittle.info/dsvil2018/) devloped for the [Data Science Visualization Institute for Librarians](https://www.lib.ncsu.edu/data-science-and-visualization-institute).  The slides and workbook work together, along with face-to-face presentations, to enourage data savy skills development.  Use these resources to guide your learning through a series of data experiments illustrating different aspects of data manipulation.  
+Recent modification of this workbook were written to augment a series of [slide deck presentations](https://johnlittle.info/dsvil2018/) developed for the [Data Science Visualization Institute for Librarians](https://www.lib.ncsu.edu/data-science-and-visualization-institute).  The slides and workbook work together, along with face-to-face presentations, to encourage data savvy skills development.  Use these resources to guide your learning through a series of data experiments illustrating different aspects of data manipulation.  
 
-Short-clip, silent video presentations are integrated into the workbook chapters.  The soundless quality of these instructional videos are intended to enhance student learning during group learning labs by offering addition intstructional options during group training sessions.  The videos can also serve to illustrate concepts and techniques presented in the workbook, which otherwise has minimal explanatory text.
+Short-clip, silent video presentations are integrated into the workbook chapters.  The soundless quality of these instructional videos are intended to enhance student learning during group learning labs by offering addition instructional options during group training sessions.  The videos can also serve to illustrate concepts and techniques presented in the workbook, which otherwise has minimal explanatory text.
 
 &nbsp;  
 
