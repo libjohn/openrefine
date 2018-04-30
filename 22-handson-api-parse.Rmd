@@ -32,12 +32,12 @@ Now parse the value of the JSON data “fips” element; call the “<span class
 
 3. <span class="or-menu"> JSON data > Edit column > Add column based on this column ... </span> 
     * New column name = `FIPS Code`  
-    * expression = `value.parseJson().Results.county[0].fips` ^[Note the square-bracket (`[0]`) notation in the `ParseJson()` function denotes and identifies the first array element.  It's the first element because in OpenRefine counting begins with zero (e.g. 0,1,2,3,4,5).  The <span class="highlight-turq-fixed">county</span> array in the example below consists of only 1 value element (consisting of four, named key/value pairs; of which fips is one key).  Since the JSON notation indicates county is an array, in this case of quantity 1, we identify that first element of the array by the number '0'.  See the JSON example below]
+    * expression = `value.parseJson().Results.county[0].fips` &nbsp; ^[Note the square-bracket (`[0]`) notation in the `ParseJson()` function denotes and identifies the first array element.  It's the first element because in OpenRefine counting begins with zero (e.g. 0,1,2,3,4,5).  The <span class="highlight-turq-fixed">county</span> array in the example below consists of only 1 value element (consisting of four, named key/value pairs; of which fips is one key).  Since the JSON notation indicates county is an array, in this case of quantity 1, we identify that first element of the array by the number '0'.  See the JSON example.]
     * <span class="or-menu">OK</span>
     
     
 <div class="video">     
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DbjpmVEpMiI" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DbjpmVEpMiI?start=31" frameborder="0" allowfullscreen></iframe>
 <div class="video">     
     
 #### JSON Data Example {-}
