@@ -13,17 +13,24 @@ github-repo: libjohn/openrefine
 output_dir: "~/R/github/libjoh.github.io/foo"  
 description: "This lab workbook contains hands-on material supplementing the OpenRefine workshops"
 ---
-<!-- gitbook(css="style.css") --> <!-- use this, not render_book(), below -->
+<!-- render_book("index.Rmd") -->
+<!-- gitbook(css="style.css") --> 
+<!-- use this, not render_book(), below -->
 <!-- render_book("index.Rmd", output_format = NULL, clean = TRUE, 
   envir = parent.frame(), clean_envir = !interactive(), 
   output_dir = NULL, new_session = NA, preview = FALSE, 
   encoding = "UTF-8") -->
-  
+
 # Preface {-}
-This lab workbook contains hands-on material supplementing the OpenRefine workshops taught by John Little and hosted by the Data & Visualization Services Department, Duke University Libraries. 
 
 <img src="images/data-cleaning.png" alt="cover image" class="center" /> 
 
+
+This lab workbook contains hands-on material supplementing the OpenRefine workshops taught by [John Little](https://john.little.info/) and hosted by the [Data & Visualization Services Department](https://library.duke.edu/data/), Duke University Libraries. 
+
+Recent modification of this workbook were written to augement a series of [slide deck presentations](https://johnlittle.info/dsvil2018/) devloped for the [Data Science Visualization Institute for Librarians](https://www.lib.ncsu.edu/data-science-and-visualization-institute).  The slides and workbook work together, along with face-to-face presentations, to enourage data savy skills development.  Use these resources to guide your learning through a series of data experiments illustrating different aspects of data manipulation.  
+
+Short-clip, silent video presentations are integrated into the workbook chapters.  The soundless quality of these instructional videos are intended to enhance student learning during group learning labs by offering addition intstructional options during group training sessions.  The videos can also serve to illustrate concepts and techniques presented in the workbook, which otherwise has minimal explanatory text.
 
 &nbsp;  
 
