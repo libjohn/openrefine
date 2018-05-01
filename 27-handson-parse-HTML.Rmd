@@ -1,0 +1,98 @@
+# Hands-on: HTML Parsing
+
+Goal:  Learn how to use OpenRefine's HTML parsing capabilities by fetching some [David Price press releases](https://price.house.gov/newsroom/press-releases) and then parsing the content.
+
+1. Import Data  
+
+    - <span class="or-menu">Create Project  > Web Addresses (URLs) ></span>   `https://raw.githubusercontent.com/libjohn/openrefine/master/data/price-crawl-and-HTML-parse.csv`   
+    - <span class="or-menu">Next >></span>  
+    - You many want to give your project a pretty title
+    - Create Project >> 
+
+## Fetch
+
+Now let’s fetch the data by crawling a few links to Congressman Price's press releases. This will return large amounts of raw HTML that can be hard to read.  So, after fetching, we'll parse the result.  
+
+
+2. Fetch HTML 
+
+    - <span class="or-menu"> prlink-href > Edit column > Add column by fetching URLs… </span>
+    - New column name = `raw HTML`
+    - Throttle delay = `2000`
+    - Expression = <br>
+    `value`
+    - <span class="or-menu">OK</span>
+
+## Parse
+
+Now parse the HTML data.
+
+3. <span class="or-menu"> raw HTML > Edit column > Add column based on this column ... </span> 
+
+    - New column name = `HTML title`  
+    - expression = `value.parseHtml().select("title")[0].htmlText()` &nbsp; ^[Note the square-bracket (`[0]`) notation in the `ParseHtml()` function denotes and identifies the first array element.  It's the first element because in OpenRefine counting begins with zero (e.g. 0,1,2,3,4,5).]
+    - <span class="or-menu">OK</span>
+
+3. <span class="or-menu"> raw HTML > Edit column > Add column based on this column ... </span> 
+
+    - New column name = `body title`  
+    - expression = `value.parseHtml().select("h1#page-title.title")[0].htmlText()`
+    - <span class="or-menu">OK</span>
+    
+4. <span class="or-menu"> raw HTML > Edit column > Add column based on this column ... </span> 
+
+    - New column name = `date2 `  
+    - expression = `value.parseHtml().select("div.pane-content")[0].htmlText()`
+    - <span class="or-menu">OK</span>
+    
+3. <span class="or-menu"> raw HTML > Edit column > Add column based on this column ... </span> 
+
+    - New column name = `dateline`  
+    - expression = `value.parseHtml().select("div.field-item.even p strong")[0].htmlText()`
+    - <span class="or-menu">OK</span>
+    
+3. <span class="or-menu"> raw HTML > Edit column > Add column based on this column ... </span> 
+
+    - New column name = `links`  
+    - expression = 
+```
+forEach(
+    value.parseHtml().select("div#block-system-main")[0].select("a"),
+    e,
+    e.htmlAttr("href")
+).join("|")
+```
+    - <span class="or-menu">OK</span>
+    
+3. <span class="or-menu"> raw HTML > Edit column > Add column based on this column ... </span> 
+
+    - New column name = `link text`  
+    - expression = 
+```
+forEach(
+    value.parseHtml().select("div#block-system-main")[0].select("a"),
+    e,
+    e.htmlText()
+).join("|")
+```    
+    - <span class="or-menu">OK</span>
+    
+## Inspect your work...
+
+9. <span class="or-menu"> raw HTML > View > Collapse this column </span>
+
+9. Click the `records` link in the "Show as:  **rows** records" section, above the column headers
+
+9.  <span class="or-menu"> links > Edit cells > Split multi-valued cells... </span>
+
+    - for the *by separator* option, in the *Separator* textbox enter a pipe:  `|`
+    - repeate this step for the `link text` column
+    
+9. Look around.  Scroll left to right and wee what you've parsed.
+    
+
+
+
+
+
+
