@@ -1,13 +1,10 @@
-# Workshop Outline {-}
+# Preamble {-}
 
 *OpenRefine for Data Cleaning: An Outline for the Workshop*
 
-John Little  
-Data Analysis Librarian  
+[John Little](https://johnlittle.info/)  
 [Data & Visualization Services](http://library.duke.edu/data) (the /Edge - Bostock Library)  
 Duke University Libraries  
-
-## Workshop Structure {-}
 
 **tl;dr...**  OpenRefne = good; data cleaning = good; learn by doing; [Skip to the hands-on](#start) sections in this workbook.
 
@@ -21,15 +18,15 @@ OpenRefine relieves me of the need to memorize file handle syntax, file manageme
 
 I hope you enjoy learning about OpenRefine.
 
-### Workshop Philosophy {-}
+## Workshop Philosophy {-}
 
-I developed this workbook to consist of hands-on exercises that will reinforce my in-person instruction.  My instruction is aimed at promoting a learn-by-doing, and learn-by-observation approach.  So, essentially, if you're in the workshop, you can **listen to my brief introdution and then skip to the hands-on sections**.  The remainder of this section consists of bullet points which I'll use in the instruction portion of the lecture.  
+I developed this workbook to consist of hands-on exercises that will reinforce my in-person instruction.  My instruction is aimed at promoting a learn-by-doing, and learn-by-observation approach.  So, essentially, if you're in the workshop, you can **listen to my brief introdution and then skip to the hands-on sections**. Or you can watch the recording (below.)  The remainder of this section consists of some overview about OpenRefine that may be important.  At the same time, it's lecture, so we may learn it another way in the workshop.  
 
 I like to think of this workshop and workbook as a cooking metaphor. I'll introducing you to a bunch of spices (functions).  Then I'll give you some recipes.  I won't give you a lot of theory.  If you complete each recipe and follow each step, the recipe will turn out.  If you pay attention, you learn something about how to combine the elements.  Your exposure to the spices will help you learn what works and what you like.  Best of all, as you gain experience with the possibilities you can learn more as you experiment on your own.  
 
 <img src="images/DataCleaningPadawan.png" alt="tweet ~ data cleaning takes effort" class="center" />  
 
-&nbsp;  
+## On Data Cleaning {-}
 
 It has been [written](https://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html) that 80% of any data project is comprised of *data cleaning*.  
 
@@ -46,7 +43,7 @@ pie(
 
 <img src="images/pie-1.png" alt="Data Project Elements" class="center" width="672"/>
 
-Furthermore, of that 80% -- the part of your data project comprised of data cleaning -- 80% of that data cleaning is *tedious* while the remaining 20% is *confusing*.  
+Furthermore, of that data cleaning part, 80% of that is *tedious* while the remaining 20% is *confusing*.  
 
 ```{r, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 par(mar = c(0, 1, 0, 1))
@@ -60,7 +57,7 @@ pie(
 
 <img src="images/pie-2.png" alt="Data Cleaning Elements" class="center" width="672"/>
 
-I prefer to think of data cleaning as a puzzle rather than a tedium.  Data cleaning is a necessary step. If given short shrift, your data will become problematic and the clearning process will still have to be addressed.   Finally, since this is not an analysis book,  let me remind you of the the old adage: "garbage in, garbage out".  Clean your data and decrease the chances of producing garbage.  Keeping in mind that the bulk of any data project involves data cleaning, you may as well have the best tools at your fingertips; you may as well do a good job; and you may as well enjoy the puzzle. OpenRefine to the rescue... 
+I prefer to think of data cleaning as a puzzle rather than a tedium.  Data cleaning is a necessary step. If given short shrift, your data will become problematic and the clearning process will still have to be addressed.   Finally, since this is not an analysis book,  let me remind you of the old adage: "garbage in, garbage out".  Clean your data and decrease the chances of producing garbage.  Keeping in mind that the bulk of any data project involves data cleaning, you may as well have the best tools at your fingertips; you may as well do a good job; and, you may as well enjoy the puzzle. OpenRefine to the rescue... 
 
 ```{r, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 par(mar = c(0, 1, 0, 1))
@@ -73,30 +70,27 @@ pie(
 
 <img src="images/pie-3.png" alt="Data Cleaning with OpenRefine" class="center" width="672"/>
 
-One reason data cleaning is such a challenge is that information is naturally unstructured.  Meanwhile, most analysis tools prefer precise data structures.  Transforming your unstructure mass  into a proper structure is often as idiosyncratic as the data you are trying to analyze.  Therefore, I invite you to learn about data cleaning in this workshop.  Then meet with me when you have a specific project in mind.  I'll be happy to help you further.  (If you're reading this preface, and not enrolled in one of my workshops at Duke University, maybe you can get help on the [OpenRefine Mailing List](http://openrefine.org/documentation.html).  There you will find many helpful and knowledgeable people willing to help you learn.)
+One reason data cleaning is such a challenge is that information is naturally unstructured.  Meanwhile, most analysis tools prefer precise data structures.  Transforming your unstructure mass  into a proper structure is often as idiosyncratic as the data you are trying to analyze.  Therefore, I invite you to learn about data cleaning in this workbook.  
 
 ## Workshop Video {-}
 
-I offer this workshop frequently, at least once a semester and you can watch a recording of this OpenRefine workshop (below).  On the [DVS workshop recordings](http://library.duke.edu/data/news/past-workshops) page you will  find the second and third parts of a workshop series going into more detail on [Regular Expressions](http://library.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=dd4cd7cc-6aa7-4084-a229-615f3aebe6bd) and [Web Scraping](http://library.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=5da46414-bd58-41e3-8ff1-3ecb1ad45fae).
+This recording is from a previous workshop.  Although some of the content has changed, you can follow the video covering the first two hands-on sections.  On the [DVS workshop recordings](http://library.duke.edu/data/news/past-workshops) page.
 
 <div class="video"> 
 <iframe height="360" width="640" src="https://warpwire.duke.edu/w/-4YBAA/" frameborder="0" scrolling="0" allowfullscreen></iframe>
 </div> 
 
 
-## For best results {-}
+## For Best Results {-}
 1. The hands-on approach includes a reliance on the [data-science](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram) notion of "[hacking](https://datajobs.com/what-is-data-science)" (not "cracking").  Pay attention to what you are seeing, what you are typing, what happens, what transforms, the end-result vis-a-vis the initial state of the data.  
 2. Learn by doing  
 3. Learn *best* by working on your own project  
-4. Set up an appointment for consultations -- http://v.gd/littleconsult
 
-
-## Overview {-}
-* What is [OpenRefine](http://openrefine.org)
-* What is a Project
-* Reproducible Research
 
 ## Comparative Advantage {-}
+
+Why Use OpenRefine vs. Excel or other tools?
+
 * Easy   
     + Menu driven **faceting**, and **filtering**
     + Clean up data inconsistencies using powerful **clustering** and edit algorithms 
@@ -145,11 +139,27 @@ Excel Formula | `INDEX(salary!$C$1:$C$4,MATCH(1,('player DB'!$A2=salary!$A$1:$A$
 
 
 ### Video {-}
-Watch this excellent and brief Video Introduction.  It only takes a few minutes.  And then watch part 2 and part 3 to expand your knowledge.  
+Watch this excellent and brief Video Introduction.  It only takes a **few minutes**.  And then watch part 2 and part 3 to expand your knowledge.  
 
 <div class="video">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/B70J_H_zAWM?list=UUqwSVsJ8CWD9pQUZDbJC1ew" frameborder="0" allowfullscreen></iframe>
 </div>
+
+## Reproducible {-}
+
+Refine supports reproducible research.  
+
+- **Undo**:  every step is recorded and can be undone.
+- **Share**:  your steps are recorded and can be shared in a JSON notation
+- **Rerun**:  did I say your steps are recorded?  Not only that, but those "recordings" can be shared with others or re-run on future data.
+- **Projects**:  each OpenRefine "project" retains a history of all your steps.  The project can be exported and subsquently imported to other instances of OpenRefine.
+- **Exporting**:  There is a powerful export mechanism that allows you to build selective reports
+
+## Documentation {-}
+
+- User documentation is the ["Official Documentation Wiki"](https://github.com/OpenRefine/OpenRefine/wiki)
+
+- [The *Using OpenRefine* Book, the email list, and other stuff](http://openrefine.org/documentation.html)
 
 
 

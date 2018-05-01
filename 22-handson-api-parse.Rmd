@@ -3,21 +3,19 @@
 Goal:  We want to gather the FIPS code for some data by matching a county name to a government server which maintains a server that enables FIPS lookups. The government server returns data in a JSON format.  After gathering the data we’ll parse the JSON format and isolate the particular data from the data wrapper.
 
 
-1. Open  Data  
+1. Import Data  
     * <span class="or-menu">Create Project  > Web Addresses (URLs) ></span>   `https://raw.githubusercontent.com/libjohn/openrefine/master/data/subset-Raleigh-Building-Permits-for-API-JSON-parsing.csv`   
     * <span class="or-menu">Next >></span>  
     * You many want to give your project a pretty title
     * Create Project >> 
 
-You should now have 6 matching rows.  
-
 ## API
 
-Now let’s fetch the data from a [Web API](http://www.broadbandmap.gov/developer/) made available via the National Broadband Map ([NBM](http://www.broadbandmap.gov/) | [NBM Developer](https://www.broadbandmap.gov/developer)). This API returns a FIPS code, given a county name (or in this case, even a partial county name.)
+Now let’s fetch the data from a [Web API](http://www.broadbandmap.gov/developer/) made available via the National Broadband Map ([NBM](http://www.broadbandmap.gov/) | [NBM Developer](https://www.broadbandmap.gov/developer)). This API returns a FIPS code, given a county name (or in this case, even a partial county name.)  We’ll use the [API documentation for Geography by Name API](http://www.broadbandmap.gov/developer/api/census-api-by-geography-name)^[The documentation informs us that the format of the URL we want to construct is as follows:
+http://www.broadbandmap.gov/broadbandmap/census/county/durh?format=json ].  In this case, simply use the County `value` as the search string wrapped in the API query protocol.
 
 
-2. Fetch JSON data from the National Broadband Map.  We’ll use the [API documentation for Geography by Name API](http://www.broadbandmap.gov/developer/api/census-api-by-geography-name)^[The documentation informs us that the format of the URL we want to construct is as follows:
-http://www.broadbandmap.gov/broadbandmap/census/county/durh?format=json ] which returns Census geography for a geography name (e.g. Durham).  In this case we simply use the County `value` as the search string wrapped in the API query protocol.
+2. Fetch JSON data from the National Broadband Map.  
     + <span class="or-menu"> county > Edit column > Add column by fetching URLs… </span>
     + New column name = `JSON data`
     + Throttle delay = `2000`

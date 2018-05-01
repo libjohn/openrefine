@@ -10,7 +10,7 @@ In this example you  will open a new data set to practice importing a different 
 
 We'll use a **subset**[^2] of data from the Raleigh Open Data portal:  “Raleigh Police Incident Data 2005plus2014.csv”.  
 
-1. Open  Data  
+1. Import Data  
     * <span class="or-menu">Create Project  > Web Addresses (URLs) ></span>   `https://github.com/libjohn/openrefine/raw/master/data/Raleigh%20Police%20Incident%20Data%202005plus2014.csv`   
     * <span class="or-menu">Next >></span>  
     * You many want to give your project a pretty title

@@ -57,14 +57,4 @@ This time we'll put together everything we've learned (how to use OpenRefine, re
     + <span class="or-menu">date3 > Facet > Timeline facet </span> 
 
 
-## Reproducible
-
-Refine supports reproducible research.  Here are the things you may have already noticed.
-
-* Undo:  every step is recorded and can be undone.
-* Share:  your steps are recorded and can be shared in a JSON notation
-* projects:  In each OpenRefine "project", all the steps of your project are recorded and are shareable.
-* Exporting:  There is a powerful export mechanism that allows you to build selective reports
-
-
 [^5]: [Dates are Difficult](http://www.i-programmer.info/babbages-bag/391-dates-are-difficult.html) by Mike James (www.i-programmer.info)

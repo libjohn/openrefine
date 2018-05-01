@@ -95,7 +95,7 @@ kable(
 
 ## Ingest Excel data  
 
-1. Open  Data  
+1. Import Data  
     * <span class="or-menu">Create Project  > Web Addresses (URLs) > </span>  `https://github.com/libjohn/openrefine/raw/master/data/salary.xlsx`
     * <span class="or-menu">Next >> </span>  
     * You many want to give your project a pretty title
