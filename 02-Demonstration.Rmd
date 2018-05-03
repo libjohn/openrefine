@@ -1,6 +1,6 @@
 # Demonstration {-}
 
-## Load Data {-}
+## Import Data {-}
     
 1. <span class="or-menu">Create Project  > Web Addresses (URLs) > </span> `https://raw.githubusercontent.com/libjohn/openrefine/master/data/bicycle-subset-phm-collection.tsv`
 2. Uncheck - "Quotation marks are used to enclose" (bottom-right)
