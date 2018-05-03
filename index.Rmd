@@ -26,7 +26,7 @@ description: "This lab workbook contains hands-on material supplementing the Ope
 <img src="images/data-cleaning.png" alt="cover image" class="center" /> 
 
 
-This lab workbook contains hands-on material supplementing the OpenRefine workshops taught by [John Little](https://john.little.info/) and hosted by the [Data & Visualization Services Department](https://library.duke.edu/data/), Duke University Libraries. 
+This lab workbook contains hands-on material supplementing the OpenRefine workshops taught by [John Little](https://johnlittle.info/) and hosted by the [Data & Visualization Services Department](https://library.duke.edu/data/), Duke University Libraries. 
 
 Recent modification of this workbook were written to augment a series of [slide deck presentations](https://johnlittle.info/dsvil2018/) developed for the [Data Science Visualization Institute for Librarians](https://www.lib.ncsu.edu/data-science-and-visualization-institute).  The slides and workbook, together and along with the face-to-face presentations, intend to encourage data-savvy skills-development.  Use these resources to guide your learning through a series of data experiments that illustrate different aspects of data manipulation.  If you'd like, watch [a video recorded from an earlier workshop](preamble.html#workshop-video).
 
