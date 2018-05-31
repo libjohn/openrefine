@@ -26,7 +26,7 @@ We'll use a **subset**[^2] of data from the Raleigh Open Data portal:  “Raleig
            </ul>   
 
 > Explanation  
-In the step above, you limited your data set to find all the police incident data where there is no location information.  That is, when the cell is blank,there there is no location information.
+In the step above, you limited your data set to find all the police incident data where there is no location information.  That is, when the cell is blank there is no location information.
 
 
 > Explanation for the next step:

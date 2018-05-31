@@ -22,10 +22,10 @@ allowfullscreen></iframe>
     - <span class="or-menu">Next >></span>  
     - You many want to give your project a pretty title
     - <span class="or-menu"> Create Project >> </span>
+    - Change **Show:** to **25** to see all 11 records.
+
 
 1. <span class="or-menu"> author > Reconcile > Start reconciling... </span>
-
-    a. Change the **Show:** to **25**  so you can see all 11 records.
 
     a. First time / One time ...
     
