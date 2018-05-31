@@ -65,14 +65,19 @@ allowfullscreen></iframe>
 3. Add authoritative author data from VIAF
 
     a. <span class="or-menu"> author > Reconcile > Start reconciling... </span>
+    a. Under **Services**, click **VIAF**
     a. Under *Reconcile each cell to an entity of one of these types:*, choose **Person**
     a. Click, <span class="or-menu">Start Reconciling</span>
     a. <span class="or-menu">authors > Reconcile > Actions > Match each cell to its best candidate</span>
     a. By useing the *Choose new match* option, fix row 2.
     
 4. Transform the "major works" column by splitting the column at the pipe:  `|'
+
+    a. <span class="or-menu"> major works > Edit cells > Trasnform... </span>
+    a. Expression = `value.split("|")[1]`
+    a. <span class="or-menu"> OK </span>
         
-3. Can Export as CSV (Excel, etc.) with Reconciled info.
+Now, when you <span class="or-menu"> Export </span> as Comma-separated Value (Excel, etc.) All of the reconciled information will be with retained.
 
 
 ## Reconciliation Resources
