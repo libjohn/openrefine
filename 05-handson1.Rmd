@@ -9,7 +9,7 @@ We'll use a **subset**[^1] of [Raleigh Building Permits data](https://github.com
     + Remember: The User Interface for Refine is Chrome or Firefox 
         + If your default browser is one of these, Refine will auto-launch to http://127.0.0.1:3333
         + If your default browser is IE, you’ll need to open the following URL http://127.0.0.1:3333 in Chrome or Firefox
-2. <span class="or-menu">Create Project  > Web Addresses (URLs) ></span> `https://github.com/libjohn/openrefine/raw/master/data/subset%20Raleigh%20Building%20Permits.csv`  
+2. <span class="or-menu">Create Project  > Web Addresses (URLs) ></span> `https://raw.githubusercontent.com/libjohn/openrefine/master/data/subset-RBP-narrow.csv`  
 3. Click <span class="or-menu">Next >></span> 
 4. Select:  Columns are separated by “commas (CSV)”
 5. Change the Project Name to `Raleigh Building Permits` and click Create Project >> (top-right) 
