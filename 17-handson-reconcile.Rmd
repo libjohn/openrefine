@@ -41,6 +41,7 @@ allowfullscreen></iframe>
             a. New column name = **major works**
             b. Expression = `cell.recon.candidates[0].name`   ^[http://liwong.blogspot.com/2017/07/tutorial-on-objects-and-cellrecon-object.html]
             c. <span class="or-menu"> OK </span>
+        i. In the left-hand sidebar,  <span class="or-menu">Remove All</span> facets
         
     b. The rest of the time...
     
@@ -48,7 +49,6 @@ allowfullscreen></iframe>
         i. Under **Services**, click **Wikidata Reconciliation for OpenRefine (en)**
         i. Under *Reconcile each cell to an entity of one of these types:*, choose, **human**
         i. Click, <span class="or-menu">Start Reconciling</span>
-        i. In the left-hand sidebar,  <span class="or-menu">Remove All</span> facets
         i. By clicking the approriate single checkbox in each cell of the *authors* column, **manually** slect the most appropriate author for our topic.  (Our topic is African American Authors everyone should read).  Not every cell has an author for which you must make a selection.  Cells 2, 10 need your intervention. 
         
             a. In Cell 2, James Baldwin, select the first option which a match of "(100)"

@@ -40,7 +40,7 @@ Position:  0123  6    1        2
 </pre>
 
 > For Example...  
-    - To take the year“2014”, use expression: `value[6,10]`[^3]  
+    - To take the year “2014”, use expression: `value[6,10]`[^3]  
     - To take the hour, use `value[11,13]`  
     - To take PM (or AM), use `value[20,22]`  
 
