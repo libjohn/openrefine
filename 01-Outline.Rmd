@@ -57,7 +57,7 @@ pie(
 
 <img src="images/pie-2.png" alt="Data Cleaning Elements" class="center" width="672"/>
 
-I prefer to think of data cleaning as a puzzle rather than a tedium.  Data cleaning is a necessary step. If given short shrift, your data will become problematic and the clearning process will still have to be addressed.   Finally, since this is not an analysis book,  let me remind you of the old adage: "garbage in, garbage out".  Clean your data and decrease the chances of producing garbage.  Keeping in mind that the bulk of any data project involves data cleaning, you may as well have the best tools at your fingertips; you may as well do a good job; and, you may as well enjoy the puzzle. OpenRefine to the rescue... 
+I prefer to think of data cleaning as a puzzle rather than a tedium.  Data cleaning is a necessary step. If given short shrift, your data will become problematic and the cleaning process will still have to be addressed.   Finally, since this is not an analysis book,  let me remind you of the old adage: "garbage in, garbage out".  Clean your data and decrease the chances of producing garbage.  Keeping in mind that the bulk of any data project involves data cleaning, you may as well have the best tools at your fingertips; you may as well do a good job; and, you may as well enjoy the puzzle. OpenRefine to the rescue... 
 
 ```{r, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 par(mar = c(0, 1, 0, 1))
@@ -65,7 +65,7 @@ pie(
   c(288, 72),
   c('Easy', 'Interesting'),
   col = c('#339999', '#235F9C'),
-  init.angle = 54, border = T, main='\n\nData Cleaning in the C.O.R. Era \n "Common Open Refine Era"')
+  init.angle = 54, border = T, main='\n\nData Cleaning in the COR Era \n "Common OpenRefine"')
 ```
 
 <img src="images/pie-3.png" alt="Data Cleaning with OpenRefine" class="center" width="672"/>
