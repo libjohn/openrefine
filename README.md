@@ -6,6 +6,12 @@ workshop materials for a 2-hour hands-on approach to learning the OpenRefine dat
 This Workshop workbook is shareable at this URL https://libjohn.github.io/openrefine/  CC-BY-NC
 
 
-## Render the Book:
+## Rendering this Book:
+
+This book was composed via [R Markdown](https://rmarkdown.rstudio.com/) using Yihui Xie's R package,   [`library(bookdown)`](https://bookdown.org/yihui/bookdown/) 
 
 `render_book("index.Rmd")`
+
+## Move Files
+
+- Move files inside of `_book\*` to `libjohn.github.io\openrefine\*`
